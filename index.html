@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html lang="vi">
@@ -867,56 +868,64 @@ NHẬT KÝ BUTTON
 
     position: fixed;
 
-    left: 20px;
+    right: 20px;
+    left: auto;
     bottom: 20px;
 
-    z-index: 500;
+    z-index: 900;
 
     padding:
-        13px 22px;
+        14px 23px;
 
     border: 1px solid
-        rgba(210,175,100,.45);
+        rgba(210,175,100,.55);
 
-    border-radius: 12px;
+    border-radius: 14px;
 
-    color: #e4c47a;
+    color: #f0d28a;
 
     background:
         linear-gradient(
             135deg,
-            rgba(25,18,15,.96),
-            rgba(55,35,25,.96)
+            rgba(25,18,15,.97),
+            rgba(65,40,25,.97)
         );
 
     box-shadow:
         0 10px 35px
-        rgba(0,0,0,.45),
+        rgba(0,0,0,.55),
         inset 0 0 15px
-        rgba(180,120,50,.08);
+        rgba(180,120,50,.10);
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 16px;
+    font-size: 17px;
+
+    font-weight: bold;
 
     cursor: pointer;
 
     transition:
         transform .3s ease,
         box-shadow .3s ease;
+
+    pointer-events: auto;
+
+    display: block;
 }
 
 .diary-open-button:hover {
 
     transform:
-        translateY(-3px);
+        translateY(-3px)
+        scale(1.03);
 
     box-shadow:
         0 15px 40px
-        rgba(0,0,0,.6);
+        rgba(0,0,0,.65);
 }
 
 
@@ -1891,15 +1900,22 @@ MOBILE DIARY
         font-size: 50px;
     }
 
+    /* NÚT NHẬT KÝ TRÊN SMARTPHONE */
+
     .diary-open-button {
 
-        left: 10px;
-        bottom: 10px;
+        left: auto;
+        right: 12px;
+        bottom: 12px;
 
         padding:
-            11px 16px;
+            13px 18px;
 
-        font-size: 14px;
+        font-size: 15px;
+
+        border-radius: 14px;
+
+        z-index: 900;
     }
 }
 
@@ -2046,6 +2062,7 @@ TRÁI TIM BAY
     💙
 </div>
 
+
 <!-- =========================================================
 TRANG 1
 ========================================================= -->
@@ -2054,7 +2071,6 @@ TRANG 1
 
 <div class="glass-box">
 
-```
 <div class="rose">
 
     <div class="petal p1"></div>
@@ -2082,18 +2098,14 @@ TRANG 1
 
 </p>
 
-<p style="margin-top: 12px; font-size: 13px; opacity: 0.65; text-align: center;">
-    Dùng laptop,Mac,PC để có trải nghiệm trọn vẹn
-</p>
-
 <button class="btn" id="introNext">
     Đọc tiếp
 </button>
-```
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
 TRANG LƯU Ý
@@ -2103,7 +2115,6 @@ TRANG LƯU Ý
 
 <div class="glass-box">
 
-```
 <h1 class="title">
     Một chút trước khi bắt đầu...
 </h1>
@@ -2118,11 +2129,11 @@ TRANG LƯU Ý
 <button class="btn" id="warningNext">
     Đọc tiếp
 </button>
-```
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
 TRANG TÂM Ý
@@ -2132,7 +2143,6 @@ TRANG TÂM Ý
 
 <div class="glass-box">
 
-```
 <h1 class="title">
     Trước khi đến với trang tiếp...
 </h1>
@@ -2150,11 +2160,11 @@ TRANG TÂM Ý
 <button class="btn" id="truthNext">
     Xem tiếp
 </button>
-```
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
 TRANG KỈ NIỆM
@@ -2164,7 +2174,7 @@ TRANG KỈ NIỆM
 
 <div class="memory-container">
 
-```
+
 <!-- SLIDE 1 -->
 
 <div class="memory-slide active">
@@ -2302,7 +2312,7 @@ TRANG KỈ NIỆM
                 người yêu của ############# thì không phải là chúng
                 mình hợp nhau hay nói chuyện hợp hay sở
                 thích bla blo mà đơn giản ### muốn bảo vệ
-                ############# khỏi những thứ xấu ngoài kia (((=
+                ############# khỏi những thứ xấu ngoài kia (((
             </p>
 
         </div>
@@ -2352,7 +2362,7 @@ TRANG KỈ NIỆM
                 bạn vy chơi và cả 2 có cùng số phút chơi
                 giống nhau nên ############# hiểu lầm là ### chán #############
                 và theo bạn kia "xinh hơn giọng ngọt hơn
-                hoạt bát hơn???? lúc đấy ############# nói thế ### 
+                hoạt bát hơn???? lúc đấy ############# nói thế ###
                 cũng không biết".
             </p>
 
@@ -2572,7 +2582,9 @@ TRANG KỈ NIỆM
 </div>
 
 
-<!-- NHẬT KÝ -->
+<!-- =========================================================
+NÚT NHẬT KÝ
+========================================================= -->
 
 <button
     class="diary-open-button"
@@ -2593,11 +2605,11 @@ TRANG KỈ NIỆM
     <span class="memory-dot"></span>
 
 </div>
-```
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
 TRANG LỰA CHỌN
@@ -2607,7 +2619,6 @@ TRANG LỰA CHỌN
 
 <div class="glass-box choice-box">
 
-```
 <h1 class="title">
     Cảm ơn ############# đã đọc đến đây
 </h1>
@@ -2643,11 +2654,11 @@ TRANG LỰA CHỌN
     </button>
 
 </div>
-```
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
 TRANG ĐỀ NGHỊ
@@ -2657,7 +2668,6 @@ TRANG ĐỀ NGHỊ
 
 <div class="glass-box">
 
-```
 <h1 class="title">
     Một lời cuối cùng
 </h1>
@@ -2695,11 +2705,11 @@ TRANG ĐỀ NGHỊ
     </button>
 
 </div>
-```
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
 TRANG ĐỒNG Ý
@@ -2709,7 +2719,6 @@ TRANG ĐỒNG Ý
 
 <div class="glass-box">
 
-```
 <div class="success-heart">
     ❤️
 </div>
@@ -2743,11 +2752,11 @@ TRANG ĐỒNG Ý
     </span>
 
 </p>
-```
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
 TRANG CHƯA SẴN SÀNG
@@ -2757,7 +2766,6 @@ TRANG CHƯA SẴN SÀNG
 
 <div class="glass-box">
 
-```
 <h1 class="title">
     ### hiểu mà
 </h1>
@@ -2789,11 +2797,11 @@ TRANG CHƯA SẴN SÀNG
     lại với ### là được
 
 </p>
-```
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
 TRANG BẠN
@@ -2803,7 +2811,6 @@ TRANG BẠN
 
 <div class="glass-box">
 
-```
 <h1 class="title">
     ### hiểu rồi
 </h1>
@@ -2841,11 +2848,11 @@ TRANG BẠN
     cho ### nhé
 
 </p>
-```
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
 NHẬT KÝ OVERLAY
@@ -2853,7 +2860,6 @@ NHẬT KÝ OVERLAY
 
 <div id="diaryOverlay">
 
-```
 <div class="diary-book">
 
     <!-- BÌA -->
@@ -3109,7 +3115,7 @@ NHẬT KÝ OVERLAY
         </div>
 
 
-        <!-- TRANG BẮT ĐẦU NGÀY 10/9 -->
+        <!-- TRANG 5 - BẮT ĐẦU NGÀY 10/9 -->
 
         <div
             class="diary-page left diary-page-content"
@@ -3256,8 +3262,7 @@ NHẬT KÝ OVERLAY
         </div>
 
 
-        <!-- TRANG BẮT ĐẦU NGÀY 10/9 LẦN 2 -->
-        <!-- GIỮ NGUYÊN NGÀY THEO YÊU CẦU -->
+        <!-- TRANG 8 -->
 
         <div
             class="diary-page right diary-page-content"
@@ -3266,7 +3271,7 @@ NHẬT KÝ OVERLAY
             <div class="day-start">
 
                 <span class="diary-date">
-                    11/9/2026
+                    10/9/2026
                 </span>
 
                 <div class="day-start-line"></div>
@@ -3293,7 +3298,7 @@ NHẬT KÝ OVERLAY
             <div class="diary-content">
 
                 <span class="diary-date">
-                    11/9/2026
+                    10/9/2026
                 </span>
 
                 <div class="diary-text">
@@ -3337,7 +3342,7 @@ NHẬT KÝ OVERLAY
         </div>
 
 
-        <!-- TRANG CUỐI -->
+        <!-- TRANG 10 -->
 
         <div
             class="diary-page right diary-page-content"
@@ -3346,7 +3351,7 @@ NHẬT KÝ OVERLAY
             <div class="diary-content">
 
                 <span class="diary-date">
-                    11/9/2026
+                    10/9/2026
                 </span>
 
                 <div class="diary-text">
@@ -3373,6 +3378,155 @@ NHẬT KÝ OVERLAY
             </span>
 
         </div>
+
+
+        <!-- =====================================================
+        TRANG 11 - BẮT ĐẦU NGÀY 12/9/2026
+        ===================================================== -->
+
+        <div
+            class="diary-page left diary-page-content"
+            data-page="10">
+
+            <div class="day-start">
+
+                <span class="diary-date">
+                    12/9/2026
+                </span>
+
+                <div class="day-start-line"></div>
+
+                <div class="day-start-text">
+                    Ngày thứ 4 kể từ hôm ấy.
+                    <br>
+                    Hôm nay mọi việc khá bình thường.
+                </div>
+
+            </div>
+
+            <span class="diary-page-number">
+                11
+            </span>
+
+        </div>
+
+
+        <!-- =====================================================
+        TRANG 12 - NỘI DUNG NGÀY 12/9/2026
+        ===================================================== -->
+
+        <div
+            class="diary-page right diary-page-content"
+            data-page="11">
+
+            <div class="diary-content">
+
+                <span class="diary-date">
+                    12/9/2026
+                </span>
+
+                <div class="diary-text">
+
+                    <p>
+                        hôm nay là ngày thứ 4 kể từ hôm ấy,hôm nay mọi
+                        việc khá bình thường
+                    </p>
+
+                    <p>
+                        Tôi thức dậy nào 10:00 sáng như mọi khi,như hầu
+                        hết giới trẻ hiện nay,việc đầu tiên tôi làm là
+                        mở chiếc điện thoại di động lên và kiểm tra
+                        thông báo và lướt mạng xã hội đến khi tỉnh ngủ
+                        hẳn,vẫn thao tác tay quen thuộc ấy,tôi nhanh
+                        chóng bấm vào ứng dụng tiktok,mạng xã hội thịnh
+                        hành bậc nhất thế giới hiện nay,và bấm vào check
+                        phần tin nhắn đã ghim,thứ thường chỉ dành cho
+                        người đặc biệt quan trọng với tôi (tất nhiên là
+                        những người anh em chí cốt sẽ không có slot nào),
+                        vẫn cái tên cô mèo ngốc nghếch ấy bỗng hiện lên
+                        một thông báo share 1 bài post vô tri cho tôi
+                        lúc 5:51,có lẽ đó là thủ tục giữ streak hàng
+                        ngày của cô ấy và hôm nay cô ấy làm nó sớm hơn
+                        1 chút để cả ngày sẽ không còn cần bận tâm vè
+                        tôi thêm nữa,nhưng dù sao thì điều đó cũng tiếp
+                        cho tôi năng lượng để bật dậy đi đánh răng rửa
+                        mặt và ăn phần cơm mà bà chuẩn bị sẵn cho tôi,
+                        tôi khá yêu bà,bà đích thị là người khẩu xà tâm
+                        phật,bà chưa bao giờ nói với con cháu rằng bà
+                        yêu quý các cháu thậm chí còn hay mắng nhưng bà
+                        luôn ân cần và quan tâm các cháu,có lẽ tôi cũng
+                        bị gene di chuyền 1 chút từ bà
+                    </p>
+
+                    <p>
+                        tôi bắt đầu công việc bán hàng online của mình
+                        như mọi khi và giải trí trong lúc đăng bài tìm
+                        khách hàng
+                    </p>
+
+                    <p>
+                        tôi vừa mở trò chơi free fire lên,một tựa game
+                        cũng khá thịnh hành với giới trẻ lúc bấy giờ
+                        thuộc thể loại battle royale
+                    </p>
+
+                    <p>
+                        tôi vẫn còn kết bạn với cô ấy và thậm trí là set
+                        tri kỉ(thứ mỗi tài khoản chỉ được liên kết với
+                        1 người duy nhất và thường dành cho người thân
+                        thiết,bạn chí cốt hay thậm chí là người yêu),tôi
+                        vào trang cá nhân của tôi để xem xem có những ai
+                        đã xem trang cá nhân tôi,bất ngờ khi cô ấy mặt
+                        trong danh sách đó (Cô ấy là người duy nhất xem
+                        T-T) ,đột nhiên tôi có cảm giác cô ấy cũng có
+                        quan tâm 1 chút đến mình,điều này khiến tôi vui
+                        suốt buổi chơi đó
+                    </p>
+
+                    <p>
+                        hồi chiều tôi khá mỏi và buồn ngủ do hôm qua đi
+                        tập với cường độ cao hơn bình thường nên tôi đã
+                        nghỉ để ở nhà nghỉ ngơi
+                    </p>
+
+                    <p>
+                        Mọi thứ diễn ra khá bình thường cho đến khi bạn
+                        Vy rủ tôi vào game dể chơi chung với nhưng người
+                        bạn tôi mới quen hôm qua,cuối buổi mọi người có
+                        nghỉ gần hét thì tôi với bạn Vy có tâm sự với
+                        nhau vài điều linh tinh như là chuyện tình bạn
+                        ấy cũng như của tôi và ####
+                    </p>
+
+                    <p>
+                        Và ờm bạn ấy bảo tôi là người khá "ok" nhưng
+                        cũng khá red flag.tôi không biết nữa,nó hơi sai
+                        so với tôi nhận xét chính mình,tôi chỉ là 1 kẻ
+                        biến thái,simp,và cuồng 1 người thái quá theo
+                        như tôi nghĩ
+                    </p>
+
+                    <p>
+                        Không có gì đặc sắc khi cuối ngày là lúc tôi ngắm
+                        #### như một thói quen,vẫn cái cảm giác nâng
+                        nâng như say rượu kèm theo chút đắng cay tiếc
+                        nuối ấy
+                    </p>
+
+                    <p>
+                        Tôi tệ quá.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <span class="diary-page-number">
+                12
+            </span>
+
+        </div>
+
 
     </div>
 
@@ -3406,9 +3560,9 @@ NHẬT KÝ OVERLAY
     </button>
 
 </div>
-```
 
 </div>
+
 
 <script>
 
@@ -3444,7 +3598,6 @@ RESET MÀU NỀN
 function normalMode() {
 
     document.body.classList.remove("pink-mode");
-
     document.body.classList.remove("rain-mode");
 }
 
@@ -3456,7 +3609,6 @@ NỀN HỒNG
 function pinkMode() {
 
     document.body.classList.add("pink-mode");
-
     document.body.classList.remove("rain-mode");
 }
 
@@ -3468,7 +3620,6 @@ MƯA
 function startRain() {
 
     document.body.classList.remove("pink-mode");
-
     document.body.classList.add("rain-mode");
 }
 
@@ -4330,3 +4481,4 @@ window.addEventListener(
 
 </body>
 </html>
+```
