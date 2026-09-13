@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -28,37 +27,19 @@ body {
 body {
     min-height: 100vh;
     overflow: hidden;
-
     font-family: "Segoe UI", Arial, sans-serif;
-
     color: #d7e4ed;
-
     position: relative;
 
     background:
-        radial-gradient(
-            ellipse at 20% 20%,
-            #123c52 0%,
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at 80% 70%,
-            #082536 0%,
-            transparent 50%
-        ),
-        linear-gradient(
-            135deg,
-            #03131d,
-            #062331,
-            #041923,
-            #071e2d
-        );
+        radial-gradient(ellipse at 20% 20%, #123c52 0%, transparent 45%),
+        radial-gradient(ellipse at 80% 70%, #082536 0%, transparent 50%),
+        linear-gradient(135deg, #03131d, #062331, #041923, #071e2d);
 
     transition:
         background 0.8s ease,
         color 0.8s ease;
 }
-
 
 /* =========================================================
 NỀN HỒNG
@@ -68,16 +49,8 @@ body.pink-mode {
     color: #654b55;
 
     background:
-        radial-gradient(
-            ellipse at 20% 20%,
-            #fff0f5 0%,
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at 80% 70%,
-            #ffd8e3 0%,
-            transparent 50%
-        ),
+        radial-gradient(ellipse at 20% 20%, #fff0f5 0%, transparent 45%),
+        radial-gradient(ellipse at 80% 70%, #ffd8e3 0%, transparent 50%),
         linear-gradient(
             135deg,
             #f9e1e8,
@@ -87,7 +60,6 @@ body.pink-mode {
         );
 }
 
-
 /* =========================================================
 CANVAS
 ========================================================= */
@@ -95,13 +67,10 @@ CANVAS
 #contourCanvas {
     position: fixed;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     z-index: 0;
     pointer-events: none;
-
     opacity: .85;
 
     transition:
@@ -114,7 +83,6 @@ body.pink-mode #contourCanvas {
     filter: sepia(.15) saturate(.75);
 }
 
-
 /* =========================================================
 LỚP MÀU HUYỀN BÍ
 ========================================================= */
@@ -122,7 +90,6 @@ LỚP MÀU HUYỀN BÍ
 .color-layer {
     position: fixed;
     inset: -25%;
-
     z-index: 0;
     pointer-events: none;
 
@@ -171,50 +138,35 @@ body.pink-mode .color-layer {
 @keyframes oceanGlow {
 
     0% {
-        transform:
-            translate(-2%, -2%)
-            scale(1);
+        transform: translate(-2%, -2%) scale(1);
     }
 
     25% {
-        transform:
-            translate(3%, -1%)
-            scale(1.05);
+        transform: translate(3%, -1%) scale(1.05);
     }
 
     50% {
-        transform:
-            translate(5%, 3%)
-            scale(1.08);
+        transform: translate(5%, 3%) scale(1.08);
     }
 
     75% {
-        transform:
-            translate(-2%, 4%)
-            scale(1.05);
+        transform: translate(-2%, 4%) scale(1.05);
     }
 
     100% {
-        transform:
-            translate(-3%, -2%)
-            scale(1.08);
+        transform: translate(-3%, -2%) scale(1.08);
     }
 }
 
-
 /* =========================================================
-HEART
+TRÁI TIM / SAO BAY
 ========================================================= */
 
 .heart {
     position: fixed;
-
     bottom: -70px;
-
     pointer-events: none;
-
     z-index: 1;
-
     opacity: 0;
 
     animation:
@@ -232,7 +184,6 @@ HEART
             translateX(0)
             scale(.7)
             rotate(0deg);
-
         opacity: 0;
     }
 
@@ -270,11 +221,9 @@ HEART
             translateX(-20px)
             scale(1.2)
             rotate(360deg);
-
         opacity: 0;
     }
 }
-
 
 /* =========================================================
 SCREEN
@@ -285,7 +234,6 @@ SCREEN
     inset: 0;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
@@ -293,7 +241,6 @@ SCREEN
 
     opacity: 0;
     visibility: hidden;
-
     pointer-events: none;
 
     transform: scale(.97);
@@ -307,27 +254,19 @@ SCREEN
 
 .screen.active {
     opacity: 1;
-
     visibility: visible;
-
     pointer-events: auto;
-
     transform: scale(1);
-
     z-index: 50;
 }
-
 
 /* =========================================================
 GLASS BOX
 ========================================================= */
 
 .glass-box {
-
     width: min(92%, 850px);
-
     max-height: 90vh;
-
     overflow-y: auto;
 
     padding: 45px 40px;
@@ -354,14 +293,11 @@ GLASS BOX
         box-shadow .7s ease;
 
     position: relative;
-
     z-index: 60;
 }
 
 body.pink-mode .glass-box {
-
-    background:
-        rgba(255,255,255,.88);
+    background: rgba(255,255,255,.88);
 
     border-color:
         rgba(255,100,140,.15);
@@ -376,30 +312,21 @@ body.pink-mode .glass-box {
 }
 
 .glass-box::-webkit-scrollbar-thumb {
-
-    background:
-        rgba(100,190,220,.4);
-
+    background: rgba(100,190,220,.4);
     border-radius: 10px;
 }
-
 
 /* =========================================================
 TYPOGRAPHY
 ========================================================= */
 
 .title {
-
     color: #a9e9ff;
-
     font-size: 32px;
-
     line-height: 1.35;
-
     margin-bottom: 25px;
 
-    transition:
-        color .7s ease;
+    transition: color .7s ease;
 }
 
 body.pink-mode .title {
@@ -407,17 +334,12 @@ body.pink-mode .title {
 }
 
 .text {
-
     color: #c9d9e2;
-
     font-size: 18px;
-
     line-height: 1.85;
-
     text-align: left;
 
-    transition:
-        color .7s ease;
+    transition: color .7s ease;
 }
 
 body.pink-mode .text {
@@ -428,17 +350,14 @@ body.pink-mode .text {
     text-align: center;
 }
 
-
 /* =========================================================
 BUTTON
 ========================================================= */
 
 .btn {
-
     margin-top: 28px;
 
     border: none;
-
     border-radius: 50px;
 
     padding: 14px 30px;
@@ -453,7 +372,6 @@ BUTTON
     color: white;
 
     font-size: 17px;
-
     font-weight: bold;
 
     cursor: pointer;
@@ -468,14 +386,12 @@ BUTTON
         background .7s ease;
 
     position: relative;
-
     z-index: 100;
 
     pointer-events: auto;
 }
 
 .btn:hover {
-
     transform:
         translateY(-3px)
         scale(1.04);
@@ -486,7 +402,6 @@ BUTTON
 }
 
 body.pink-mode .btn {
-
     background:
         linear-gradient(
             135deg,
@@ -495,18 +410,15 @@ body.pink-mode .btn {
         );
 }
 
-
 /* =========================================================
 TRANG ĐẦU
 ========================================================= */
 
 .rose {
-
     width: 130px;
     height: 130px;
 
-    margin:
-        0 auto 25px;
+    margin: 0 auto 25px;
 
     position: relative;
 
@@ -518,7 +430,6 @@ TRANG ĐẦU
 }
 
 .rose-center {
-
     position: absolute;
 
     width: 55px;
@@ -549,7 +460,6 @@ TRANG ĐẦU
 }
 
 .petal {
-
     position: absolute;
 
     width: 60px;
@@ -597,36 +507,26 @@ TRANG ĐẦU
     }
 }
 
-
 /* =========================================================
 MEMORY
 ========================================================= */
 
 .memory-container {
-
     width: min(94%, 1000px);
-
     height: 90vh;
-
     position: relative;
 }
 
 .memory-slide {
-
     position: absolute;
-
     inset: 0;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     opacity: 0;
-
     visibility: hidden;
-
     pointer-events: none;
 
     transform:
@@ -641,11 +541,8 @@ MEMORY
 }
 
 .memory-slide.active {
-
     opacity: 1;
-
     visibility: visible;
-
     pointer-events: auto;
 
     transform:
@@ -656,13 +553,10 @@ MEMORY
 }
 
 .memory-box {
-
     width: 100%;
-
     max-width: 900px;
 
     max-height: 88vh;
-
     overflow-y: auto;
 
     padding:
@@ -685,12 +579,10 @@ MEMORY
         blur(12px);
 
     position: relative;
-
     z-index: 30;
 }
 
 body.pink-mode .memory-box {
-
     background:
         rgba(255,255,255,.90);
 }
@@ -700,7 +592,6 @@ body.pink-mode .memory-box {
 }
 
 .memory-box::-webkit-scrollbar-thumb {
-
     background:
         rgba(100,190,220,.4);
 
@@ -708,11 +599,9 @@ body.pink-mode .memory-box {
 }
 
 .memory-title {
-
     color: #a9e9ff;
 
     font-size: 28px;
-
     line-height: 1.4;
 
     text-align: center;
@@ -725,11 +614,9 @@ body.pink-mode .memory-title {
 }
 
 .memory-content {
-
     color: #cadbe4;
 
     font-size: 17px;
-
     line-height: 1.85;
 }
 
@@ -749,13 +636,11 @@ body.pink-mode .memory-content strong {
     color: #ff416c;
 }
 
-
 /* =========================================================
 MEMORY NAV
 ========================================================= */
 
 .memory-nav {
-
     position: absolute;
 
     bottom: 12px;
@@ -765,7 +650,6 @@ MEMORY NAV
         translateX(-50%);
 
     display: flex;
-
     align-items: center;
 
     gap: 12px;
@@ -774,7 +658,6 @@ MEMORY NAV
 }
 
 .memory-dot {
-
     width: 9px;
     height: 9px;
 
@@ -787,7 +670,6 @@ MEMORY NAV
 }
 
 .memory-dot.active {
-
     width: 25px;
 
     border-radius: 20px;
@@ -796,19 +678,15 @@ MEMORY NAV
         #62d5f5;
 }
 
-
 /* =========================================================
 MEMORY BUTTONS
 ========================================================= */
 
 .memory-next {
-
     position: relative;
-
     z-index: 100;
 
     border: none;
-
     border-radius: 50px;
 
     padding: 9px 18px;
@@ -819,12 +697,10 @@ MEMORY BUTTONS
         rgba(20,120,160,.65);
 
     cursor: pointer;
-
     pointer-events: auto;
 }
 
 .memory-link {
-
     position: absolute;
 
     right: 20px;
@@ -833,7 +709,6 @@ MEMORY BUTTONS
     z-index: 100;
 
     border: none;
-
     border-radius: 50px;
 
     padding: 12px 20px;
@@ -858,86 +733,89 @@ MEMORY BUTTONS
     pointer-events: auto;
 }
 
-
 /* =========================================================
-NHẬT KÝ BUTTON
+NÚT NHẬT KÝ
 ========================================================= */
 
 .diary-open-button {
-
     position: fixed;
 
-    right: 20px;
-    left: auto;
-    bottom: 20px;
+    left: 22px;
+    bottom: 22px;
 
-    z-index: 900;
+    z-index: 1000;
 
-    padding:
-        14px 23px;
+    border: 1px solid rgba(192,169,112,.35);
 
-    border: 1px solid
-        rgba(210,175,100,.55);
+    border-radius: 8px;
 
-    border-radius: 14px;
+    padding: 13px 22px;
 
-    color: #f0d28a;
+    color: #e9d9ae;
 
     background:
         linear-gradient(
             135deg,
-            rgba(25,18,15,.97),
-            rgba(65,40,25,.97)
+            #1b2420,
+            #303a31
         );
 
     box-shadow:
-        0 10px 35px
-        rgba(0,0,0,.55),
-        inset 0 0 15px
-        rgba(180,120,50,.10);
+        0 10px 30px rgba(0,0,0,.5),
+        inset 0 0 15px rgba(180,150,90,.08);
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 17px;
-
-    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
 
     cursor: pointer;
 
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
+    transform:
+        translateY(15px);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease,
+        visibility .5s ease;
+}
+
+#memory.active .diary-open-button {
+    opacity: 1;
+    visibility: visible;
     pointer-events: auto;
 
-    display: block;
+    transform:
+        translateY(0);
 }
 
 .diary-open-button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #303b32,
+            #475344
+        );
 
     transform:
-        translateY(-3px)
-        scale(1.03);
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,0,0,.65);
+        translateY(-3px);
 }
-
 
 /* =========================================================
 GOOGLE DRIVE
 ========================================================= */
 
 .drive-button {
-
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 10px;
@@ -966,27 +844,20 @@ GOOGLE DRIVE
         rgba(0,130,190,.25);
 }
 
-
 /* =========================================================
 CHOICE
 ========================================================= */
 
 .choice-box {
-
     width: min(92%, 750px);
-
-    padding:
-        45px 35px;
-
+    padding: 45px 35px;
     text-align: center;
 }
 
 .choice-buttons {
-
     display: flex;
 
     justify-content: center;
-
     flex-wrap: wrap;
 
     gap: 15px;
@@ -998,13 +869,11 @@ CHOICE
     margin-top: 0;
 }
 
-
 /* =========================================================
 SUCCESS
 ========================================================= */
 
 .success-heart {
-
     font-size: 90px;
 
     animation:
@@ -1016,22 +885,18 @@ SUCCESS
 @keyframes heartbeat {
 
     0%, 100% {
-        transform:
-            scale(1);
+        transform: scale(1);
     }
 
     50% {
-        transform:
-            scale(1.18);
+        transform: scale(1.18);
     }
 }
 
 .success-title {
-
     color: #ff416c;
 
     font-size: 42px;
-
     line-height: 1.35;
 
     margin:
@@ -1039,23 +904,18 @@ SUCCESS
 }
 
 .success-text {
-
     color: #777;
 
     font-size: 21px;
-
     line-height: 1.8;
 }
-
 
 /* =========================================================
 FINAL MESSAGE
 ========================================================= */
 
 .final-message {
-
     font-size: 20px;
-
     line-height: 1.9;
 
     color: #cbdce5;
@@ -1068,7 +928,6 @@ body.pink-mode .final-message {
 }
 
 .number-note {
-
     margin-top: 25px;
 
     color: #77d8f4;
@@ -1081,21 +940,16 @@ body.pink-mode .number-note {
 }
 
 .red {
-
     color: #ff304f !important;
-
     font-weight: bold;
 }
-
 
 /* =========================================================
 MƯA
 ========================================================= */
 
 #rainContainer {
-
     position: fixed;
-
     inset: 0;
 
     pointer-events: none;
@@ -1111,14 +965,11 @@ MƯA
 }
 
 body.rain-mode #rainContainer {
-
     opacity: 1;
-
     visibility: visible;
 }
 
 .rain-drop {
-
     position: absolute;
 
     top: -120px;
@@ -1162,38 +1013,43 @@ body.rain-mode #rainContainer {
     }
 }
 
-
 /* =========================================================
 DIARY OVERLAY
 ========================================================= */
 
 #diaryOverlay {
-
     position: fixed;
-
     inset: 0;
 
-    z-index: 1000;
+    z-index: 5000;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     padding: 20px;
 
     background:
         radial-gradient(
-            ellipse at center,
-            rgba(55,38,25,.45),
-            rgba(5,5,7,.96)
+            circle at 50% 45%,
+            rgba(83,86,65,.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(75,86,61,.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #050806,
+            #0b0f0c 40%,
+            #101510 70%,
+            #040605
         );
 
     opacity: 0;
-
     visibility: hidden;
-
     pointer-events: none;
 
     transition:
@@ -1202,142 +1058,220 @@ DIARY OVERLAY
 }
 
 #diaryOverlay.active {
-
     opacity: 1;
-
     visibility: visible;
-
     pointer-events: auto;
 }
 
+/* =========================================================
+MÀN ĐÊM + SAO
+========================================================= */
+
+.diary-night {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.diary-night::before,
+.diary-night::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(235,238,196,.9) 0 1px,
+            transparent 2px
+        );
+
+    background-size:
+        73px 71px;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .45;
+
+    animation:
+        starDrift
+        35s
+        linear
+        infinite;
+}
+
+.diary-night::after {
+    background-size:
+        113px 107px;
+
+    opacity: .28;
+
+    animation-duration: 55s;
+
+    animation-direction: reverse;
+}
+
+@keyframes starDrift {
+
+    from {
+        transform:
+            translate3d(0,0,0);
+    }
+
+    to {
+        transform:
+            translate3d(-70px,35px,0);
+    }
+}
 
 /* =========================================================
-DIARY BOOK
+SÁCH
 ========================================================= */
 
 .diary-book {
-
-    width: min(1100px, 96vw);
-
-    height: min(720px, 88vh);
-
     position: relative;
 
-    perspective: 2000px;
+    width: min(94vw, 1100px);
+    height: min(82vh, 720px);
+
+    perspective: 2200px;
+
+    display: flex;
 
     filter:
         drop-shadow(
-            0 30px 45px
-            rgba(0,0,0,.75)
+            0 35px 45px rgba(0,0,0,.65)
         );
 }
 
-
 /* =========================================================
-COVER
+BÌA
 ========================================================= */
 
 .diary-cover {
-
     position: absolute;
 
     inset: 0;
 
-    z-index: 200;
+    border-radius:
+        8px 18px 18px 8px;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    flex-direction: column;
-
-    padding: 50px;
-
-    border-radius: 14px 25px 25px 14px;
+    overflow: hidden;
 
     background:
-
-        radial-gradient(
-            circle at 50% 30%,
-            rgba(115,65,38,.35),
-            transparent 35%
-        ),
-
         linear-gradient(
             135deg,
-            #21130f,
-            #493024 35%,
-            #241512 70%,
-            #120b09
+            #20271f,
+            #3a4434 35%,
+            #252d25 65%,
+            #141914
         );
 
     border:
-        9px solid #17100d;
+        8px solid #171b17;
 
     box-shadow:
+        inset 0 0 0 2px rgba(164,143,93,.25),
+        inset 0 0 60px rgba(0,0,0,.65),
+        0 0 0 1px rgba(187,163,103,.18);
 
-        inset 0 0 0 2px
-        rgba(145,103,62,.4),
-
-        inset 0 0 50px
-        rgba(0,0,0,.8),
-
-        15px 0 30px
-        rgba(0,0,0,.55);
-
-    cursor: pointer;
+    z-index: 50;
 
     transform-origin: left center;
 
     transition:
-        transform 1.2s cubic-bezier(.7,0,.2,1);
+        transform 1.25s cubic-bezier(.65,.05,.25,1),
+        box-shadow .8s ease;
 }
 
-.diary-cover.open {
-
+.diary-book.opened .diary-cover {
     transform:
-        rotateY(-145deg);
+        rotateY(-172deg);
+    pointer-events: none;
+}
+
+.diary-cover::before {
+    content: "";
+
+    position: absolute;
+    inset: 12px;
+
+    border:
+        1px solid rgba(183,157,96,.28);
+
+    border-radius: 4px;
+
+    pointer-events: none;
+}
+
+.diary-cover::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 6px,
+            rgba(255,255,255,.012) 7px,
+            transparent 8px
+        );
+
+    mix-blend-mode: screen;
 
     pointer-events: none;
 }
 
 .cover-decoration {
-
     position: absolute;
 
-    inset: 25px;
+    inset: 45px;
 
     border:
-        2px solid
-        rgba(163,113,65,.5);
+        2px solid rgba(151,130,80,.30);
 
-    border-radius: 8px;
+    border-radius: 4px;
 
-    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
 }
 
 .cover-decoration::before {
-
-    content: "";
+    content: "✦";
 
     position: absolute;
 
-    inset: 12px;
+    top: -17px;
+    left: 50%;
 
-    border:
-        1px solid
-        rgba(180,130,75,.28);
+    transform:
+        translateX(-50%);
 
-    border-radius: 5px;
+    padding:
+        0 15px;
+
+    color: #b39a62;
+
+    background: #2c352a;
+
+    font-size: 22px;
 }
 
 .cover-title {
+    max-width: 65%;
 
-    max-width: 650px;
-
-    color: #a92828;
+    color: #8e2525;
 
     font-family:
         Georgia,
@@ -1345,79 +1279,280 @@ COVER
         serif;
 
     font-size:
-        clamp(30px, 5vw, 60px);
+        clamp(27px, 4vw, 48px);
 
-    line-height: 1.15;
-
-    text-align: center;
+    line-height: 1.25;
 
     text-transform: none;
 
+    letter-spacing: 2px;
+
     text-shadow:
-        2px 2px 0 #120807,
-        0 0 20px rgba(180,25,25,.2);
+        0 2px 2px rgba(0,0,0,.8),
+        0 0 15px rgba(110,20,20,.2);
 }
 
 .cover-subtitle {
+    position: absolute;
 
-    margin-top: 25px;
+    bottom: 35px;
+    left: 0;
+    right: 0;
 
-    color:
-        rgba(205,170,112,.7);
+    text-align: center;
+
+    color: rgba(201,181,128,.55);
 
     font-family:
         Georgia,
         serif;
 
-    font-size: 15px;
+    font-size: 13px;
 
     letter-spacing: 4px;
-
-    text-transform: uppercase;
 }
-
-.cover-symbol {
-
-    margin-bottom: 35px;
-
-    color: #8e2525;
-
-    font-size: 70px;
-
-    opacity: .8;
-
-    text-shadow:
-        0 0 20px
-        rgba(150,30,30,.3);
-}
-
 
 /* =========================================================
-BOOK INSIDE
+BOOK INNER
 ========================================================= */
 
-.diary-inside {
-
+.diary-pages {
     position: absolute;
 
     inset: 0;
 
     display: flex;
 
-    border-radius: 10px;
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #171914 0%,
+            #242820 49.7%,
+            #10130f 50%,
+            #242820 50.3%,
+            #171914 100%
+        );
+
+    box-shadow:
+        inset 0 0 70px rgba(0,0,0,.75);
+
+    overflow: hidden;
+}
+
+/* =========================================================
+TRANG
+========================================================= */
+
+.diary-page {
+    position: absolute;
+
+    top: 14px;
+    bottom: 14px;
+
+    width: calc(50% - 14px);
+
+    padding:
+        clamp(25px, 4vw, 50px)
+        clamp(22px, 4vw, 48px);
 
     overflow: hidden;
 
+    color: #3e382b;
+
     background:
-        #241b16;
+        radial-gradient(
+            ellipse at 30% 20%,
+            rgba(255,255,255,.45),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 70% 80%,
+            rgba(101,81,44,.08),
+            transparent 50%
+        ),
+        linear-gradient(
+            90deg,
+            #c9b98d,
+            #d8cba7,
+            #c4b284
+        );
 
     box-shadow:
-        inset 0 0 80px
-        rgba(0,0,0,.7);
+        inset 0 0 35px rgba(70,53,28,.25),
+        0 0 8px rgba(0,0,0,.4);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    transition:
+        transform .75s ease,
+        opacity .5s ease;
 }
 
-.book-spine {
+.diary-page.left {
+    left: 14px;
 
+    border-radius:
+        8px 2px 2px 8px;
+
+    transform-origin: right center;
+}
+
+.diary-page.right {
+    right: 14px;
+
+    border-radius:
+        2px 8px 8px 2px;
+
+    transform-origin: left center;
+}
+
+.diary-page.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.diary-page::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 7px,
+            rgba(77,60,31,.025) 8px
+        );
+
+    opacity: .75;
+}
+
+.diary-page::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border:
+        1px solid rgba(83,67,36,.16);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+NỘI DUNG TRANG
+========================================================= */
+
+.diary-page-content {
+    position: relative;
+
+    z-index: 2;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.diary-page h2 {
+    flex-shrink: 0;
+
+    color: #302b22;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(25px, 3vw, 38px);
+
+    font-weight: 900;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    margin-bottom: 22px;
+
+    text-shadow:
+        0 1px rgba(255,255,255,.25);
+}
+
+.diary-date {
+    color: #633b29;
+
+    font-size:
+        clamp(18px, 2vw, 24px);
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-bottom: 18px;
+
+    letter-spacing: 1px;
+}
+
+.diary-text {
+    flex: 1;
+
+    overflow: hidden;
+
+    color: #40382a;
+
+    font-size:
+        clamp(13px, 1.35vw, 17px);
+
+    line-height: 1.75;
+
+    text-align: justify;
+
+    white-space: normal;
+}
+
+.diary-text p {
+    margin-bottom: 13px;
+}
+
+.diary-note {
+    flex-shrink: 0;
+
+    margin-top: auto;
+    padding-top: 15px;
+
+    color: #675a42;
+
+    font-size: 12px;
+
+    font-style: italic;
+
+    text-align: center;
+
+    border-top:
+        1px solid rgba(80,62,34,.18);
+}
+
+/* =========================================================
+GÁY SÁCH
+========================================================= */
+
+.book-spine {
     position: absolute;
 
     top: 0;
@@ -1425,508 +1560,183 @@ BOOK INSIDE
 
     left: 50%;
 
-    width: 18px;
+    width: 24px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 20;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.55),
+            rgba(92,82,55,.25),
+            rgba(0,0,0,.65)
+        );
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,.45);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+NÚT ĐÓNG
+========================================================= */
+
+.diary-close {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    z-index: 6000;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(205,190,145,.3);
+
+    background:
+        rgba(10,13,10,.75);
+
+    color: #d9c999;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.diary-close:hover {
+    background:
+        rgba(80,65,42,.9);
+}
+
+/* =========================================================
+ĐIỀU HƯỚNG SÁCH
+========================================================= */
+
+.diary-navigation {
+    position: absolute;
+
+    left: 50%;
+    bottom: 18px;
 
     transform:
         translateX(-50%);
 
     z-index: 100;
 
-    background:
-        linear-gradient(
-            90deg,
-            #100c0a,
-            #5a3924,
-            #1a110d
-        );
+    display: flex;
 
-    box-shadow:
-        0 0 20px
-        rgba(0,0,0,.8);
+    gap: 10px;
 }
 
+.diary-navigation button {
+    min-width: 45px;
 
-/* =========================================================
-DIARY PAGE
-========================================================= */
+    border:
+        1px solid rgba(194,171,112,.3);
 
-.diary-page {
-
-    width: 50%;
-
-    height: 100%;
+    border-radius: 5px;
 
     padding:
-        clamp(30px, 5vw, 65px);
-
-    position: absolute;
-
-    top: 0;
+        8px 13px;
 
     background:
+        rgba(19,22,18,.85);
 
-        radial-gradient(
-            ellipse at 30% 20%,
-            rgba(145,100,55,.13),
-            transparent 40%
-        ),
-
-        radial-gradient(
-            ellipse at 80% 80%,
-            rgba(80,45,25,.12),
-            transparent 45%
-        ),
-
-        #d8c59c;
-
-    color: #30251c;
+    color: #d7c99f;
 
     font-family:
         Georgia,
-        "Times New Roman",
         serif;
 
-    box-shadow:
-        inset 0 0 50px
-        rgba(75,45,20,.25);
+    cursor: pointer;
+
+    transition: .25s;
 }
 
-.diary-page.left {
+.diary-navigation button:hover {
+    background:
+        rgba(66,71,57,.95);
 
-    left: 0;
-
-    border-radius:
-        10px 0 0 10px;
+    transform:
+        translateY(-2px);
 }
 
-.diary-page.right {
-
-    right: 0;
-
-    border-radius:
-        0 10px 10px 0;
-}
-
-
-/* =========================================================
-PAPER TEXTURE
-========================================================= */
-
-.diary-page::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    opacity: .35;
-
-    background-image:
-
-        radial-gradient(
-            circle at 20% 30%,
-            rgba(80,45,20,.18) 0 1px,
-            transparent 2px
-        ),
-
-        radial-gradient(
-            circle at 70% 80%,
-            rgba(80,45,20,.13) 0 1px,
-            transparent 2px
-        );
-
-    background-size:
-        37px 43px,
-        53px 61px;
-
-    mix-blend-mode: multiply;
-}
-
-.diary-page::after {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    box-shadow:
-        inset 0 0 50px
-        rgba(70,40,20,.28);
-}
-
-
-/* =========================================================
-DIARY CONTENT
-========================================================= */
-
-.diary-content {
-
-    position: relative;
-
-    z-index: 5;
-
-    height: 100%;
-
-    overflow-y: auto;
-
-    padding-right: 10px;
-
-    scrollbar-width: thin;
-}
-
-.diary-content::-webkit-scrollbar {
-    width: 4px;
-}
-
-.diary-content::-webkit-scrollbar-thumb {
-    background: rgba(60,40,20,.4);
-}
-
-
-/* =========================================================
-DIARY TITLES
-========================================================= */
-
-.diary-heading {
-
-    margin-bottom: 25px;
-
-    color: #4a1714;
-
-    font-size:
-        clamp(25px, 3vw, 39px);
-
-    line-height: 1.2;
-
-    font-weight: bold;
-
-    text-align: center;
-
-    text-shadow:
-        1px 1px 0
-        rgba(255,245,210,.4);
-}
-
-.diary-date {
-
-    display: block;
-
-    margin-bottom: 22px;
-
-    color: #761c1c;
-
-    font-size:
-        clamp(22px, 2.5vw, 32px);
-
-    font-weight: bold;
-
-    text-align: center;
-}
-
-.diary-text {
-
-    font-size:
-        clamp(14px, 1.45vw, 18px);
-
-    line-height: 1.9;
-
-    text-align: left;
-
-    white-space: normal;
-}
-
-.diary-text p {
-
-    margin-bottom: 18px;
-}
-
-.diary-note {
-
-    position: absolute;
-
-    bottom: 25px;
-
-    left: 0;
-    right: 0;
-
-    text-align: center;
-
-    color:
-        rgba(85,50,30,.75);
-
-    font-size: 14px;
-
-    font-style: italic;
-}
-
-
-/* =========================================================
-DAY START
-========================================================= */
-
-.day-start {
-
+.diary-page-number {
     display: flex;
-
-    height: 100%;
-
-    justify-content: center;
 
     align-items: center;
 
-    flex-direction: column;
-
-    text-align: center;
-}
-
-.day-start .diary-date {
-
-    font-size:
-        clamp(32px, 5vw, 58px);
-
-    margin-bottom: 25px;
-}
-
-.day-start-line {
-
-    width: 70%;
-
-    height: 1px;
-
-    margin: 10px auto 30px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #70452a,
-            transparent
-        );
-}
-
-.day-start-text {
-
-    max-width: 440px;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    font-style: italic;
-
-    opacity: .8;
-}
-
-
-/* =========================================================
-DIARY CONTROLS
-========================================================= */
-
-.diary-control {
-
-    position: absolute;
-
-    z-index: 400;
-
-    top: 50%;
-
-    transform:
-        translateY(-50%);
-
-    width: 48px;
-    height: 48px;
-
-    border-radius: 50%;
-
-    border:
-        1px solid
-        rgba(210,170,110,.5);
+    padding:
+        0 10px;
 
     color:
-        #d7bd88;
+        rgba(214,200,158,.65);
 
-    background:
-        rgba(20,13,10,.88);
-
-    cursor: pointer;
-
-    font-size: 25px;
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
-}
-
-.diary-control:hover {
-
-    transform:
-        translateY(-50%)
-        scale(1.08);
-
-    background:
-        rgba(65,38,25,.95);
-}
-
-#diaryPrev {
-    left: -25px;
-}
-
-#diaryNext {
-    right: -25px;
-}
-
-#diaryClose {
-
-    position: absolute;
-
-    top: -55px;
-
-    right: 0;
-
-    z-index: 500;
-
-    width: 40px;
-    height: 40px;
-
-    border: 1px solid
-        rgba(210,170,110,.4);
-
-    border-radius: 50%;
-
-    color: #d7bd88;
-
-    background:
-        rgba(20,13,10,.9);
-
-    cursor: pointer;
-
-    font-size: 20px;
-}
-
-
-/* =========================================================
-DIARY PAGE INDICATOR
-========================================================= */
-
-.diary-page-number {
-
-    position: absolute;
-
-    bottom: 13px;
-
-    color:
-        rgba(60,40,25,.55);
+    font-family:
+        Georgia,
+        serif;
 
     font-size: 12px;
-
-    font-family: Georgia, serif;
 }
-
-.diary-page.left .diary-page-number {
-    left: 30px;
-}
-
-.diary-page.right .diary-page-number {
-    right: 30px;
-}
-
 
 /* =========================================================
-MOBILE DIARY
+NÚT MỞ SÁCH
 ========================================================= */
 
-@media (max-width: 700px) {
+.open-book-hint {
+    position: absolute;
 
-    .diary-book {
+    left: 50%;
+    bottom: 12%;
 
-        width: 96vw;
+    transform:
+        translateX(-50%);
 
-        height: 84vh;
+    z-index: 80;
+
+    color: rgba(213,197,150,.65);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    animation:
+        hintPulse
+        2.5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes hintPulse {
+
+    0%,100% {
+        opacity: .45;
     }
 
-    .diary-inside {
-        display: block;
-    }
-
-    .book-spine {
-        display: none;
-    }
-
-    .diary-page {
-
-        width: 100%;
-
-        left: 0 !important;
-        right: auto !important;
-
-        border-radius: 10px !important;
-
-        display: none;
-    }
-
-    .diary-page.mobile-active {
-        display: block;
-    }
-
-    #diaryPrev {
-        left: 5px;
-    }
-
-    #diaryNext {
-        right: 5px;
-    }
-
-    #diaryClose {
-        top: -48px;
-        right: 5px;
-    }
-
-    .diary-cover {
-        border-width: 6px;
-    }
-
-    .cover-title {
-        font-size: 35px;
-    }
-
-    .cover-symbol {
-        font-size: 50px;
-    }
-
-    /* NÚT NHẬT KÝ TRÊN SMARTPHONE */
-
-    .diary-open-button {
-
-        left: auto;
-        right: 12px;
-        bottom: 12px;
-
-        padding:
-            13px 18px;
-
-        font-size: 15px;
-
-        border-radius: 14px;
-
-        z-index: 900;
+    50% {
+        opacity: 1;
     }
 }
 
-
 /* =========================================================
-MOBILE WEBSITE
+RESPONSIVE
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
     .glass-box {
-
         padding:
             30px 22px;
 
@@ -1938,28 +1748,21 @@ MOBILE WEBSITE
     }
 
     .text {
-
         font-size: 16px;
-
         line-height: 1.75;
     }
 
     .rose {
-
         transform: scale(.85);
-
         margin-bottom: 5px;
     }
 
     .memory-container {
-
         width: 96%;
-
         height: 91vh;
     }
 
     .memory-box {
-
         padding:
             28px 20px 75px;
     }
@@ -1969,14 +1772,11 @@ MOBILE WEBSITE
     }
 
     .memory-content {
-
         font-size: 15px;
-
         line-height: 1.75;
     }
 
     .memory-link {
-
         right: 10px;
         bottom: 10px;
 
@@ -2005,528 +1805,139 @@ MOBILE WEBSITE
     .choice-buttons .btn {
         width: 100%;
     }
-}
 
+    /* =========================
+       DIARY MOBILE
+       ========================= */
 
-/* =========================================================
-   GIAO DIỆN RESPONSIVE + NHẬT KÝ CỔ
-   ========================================================= */
-html,body{min-height:100%;width:100%}
-body{touch-action:manipulation}
-button,a{font-family:inherit}
-.screen{padding:clamp(12px,3vw,28px)}
-.glass-box{width:min(92vw,850px);max-height:calc(100dvh - 28px);overflow:hidden}
-.text,.final-message{overflow-wrap:anywhere}
-.choice-box{max-height:calc(100dvh - 28px)}
-.choice-buttons .btn{min-height:48px}
-
-/* tuyết khi từ chối */
-#snowContainer{position:fixed;inset:0;pointer-events:none;z-index:250;opacity:0;visibility:hidden;transition:opacity .7s}
-body.snow-mode #snowContainer{opacity:1;visibility:visible}
-.snowflake{position:absolute;top:-10vh;color:#fff;opacity:.85;text-shadow:0 0 8px rgba(255,255,255,.8);animation:snowFall linear infinite}
-@keyframes snowFall{to{transform:translate3d(var(--drift),110vh,0) rotate(360deg)}}
-
-/* cảnh đồng ý */
-#celebrationScene{position:fixed;inset:0;z-index:2;pointer-events:none;overflow:hidden;opacity:0;visibility:hidden;transition:opacity 1s}
-body.celebrate-mode #celebrationScene{opacity:1;visibility:visible}
-.celebration-sun{position:absolute;right:-5vw;top:-6vw;width:22vw;height:22vw;min-width:150px;min-height:150px;border-radius:50%;background:radial-gradient(circle,#fff9bf 0 18%,#ffd86b 45%,rgba(255,205,90,.12) 72%,transparent 73%);filter:blur(.2px);box-shadow:0 0 80px rgba(255,220,100,.75)}
-.meadow{position:absolute;left:-5%;right:-5%;bottom:-8%;height:42%;background:linear-gradient(to top,#5d9a49,#8fcf63 55%,rgba(170,220,115,.3));border-radius:50% 50% 0 0/30% 30% 0 0;transform:rotate(-2deg)}
-.rainbow{position:absolute;left:50%;top:12%;width:min(75vw,850px);height:min(38vw,430px);transform:translateX(-50%);border-radius:50% 50% 0 0;border:16px solid rgba(255,92,92,.55);border-bottom:0;box-shadow:0 -16px 0 rgba(255,174,77,.5),0 -32px 0 rgba(255,235,91,.45),0 -48px 0 rgba(103,210,115,.42),0 -64px 0 rgba(91,165,255,.38),0 -80px 0 rgba(169,112,255,.35)}
-.dancing-animal{position:absolute;bottom:16%;font-size:clamp(30px,5vw,62px);animation:dance 1.4s ease-in-out infinite alternate}
-.animal1{left:12%}.animal2{left:30%;animation-delay:.25s}.animal3{right:28%;animation-delay:.5s}.animal4{right:10%;animation-delay:.8s}
-@keyframes dance{from{transform:translateY(0) rotate(-7deg)}to{transform:translateY(-15px) rotate(7deg)}}
-.celebrate-box{position:relative;z-index:70}
-
-/* ===== DIARY BOOK — OLD REAL-LIFE ANTIQUE BOOK ===== */
-#diaryOverlay{
-    padding:clamp(10px,2.5vw,28px);
-    background:
-        radial-gradient(circle at 50% 42%,rgba(126,91,53,.30),transparent 42%),
-        linear-gradient(135deg,rgba(18,10,5,.94),rgba(42,24,13,.98));
-}
-
-.diary-book{
-    width:min(980px,94vw);
-    height:min(720px,84dvh);
-    position:relative;
-    perspective:2600px;
-    filter:drop-shadow(0 32px 35px rgba(0,0,0,.72));
-}
-
-/* lớp bìa phía sau + gáy */
-.diary-book::before{
-    content:"";
-    position:absolute;
-    inset:-10px -7px -12px -7px;
-    border-radius:14px 20px 20px 14px;
-    background:
-        repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 2px,transparent 2px 7px),
-        linear-gradient(90deg,#241309,#59351b 18%,#3a2011 48%,#5a3419 82%,#241208);
-    box-shadow:
-        inset 7px 0 10px rgba(0,0,0,.7),
-        inset -5px 0 8px rgba(0,0,0,.55),
-        0 5px 0 #160b05,
-        0 18px 28px rgba(0,0,0,.55);
-    z-index:-3;
-}
-
-.diary-book::after{
-    content:"";
-    position:absolute;
-    left:-18px;
-    top:7%;
-    bottom:7%;
-    width:32px;
-    border-radius:14px 0 0 14px;
-    background:
-        repeating-linear-gradient(180deg,rgba(222,176,102,.18) 0 3px,rgba(36,18,8,.2) 3px 7px),
-        linear-gradient(90deg,#1d0d06,#5a3218 45%,#2b1408);
-    box-shadow:inset 7px 0 12px rgba(0,0,0,.65),3px 0 6px rgba(0,0,0,.35);
-    z-index:-4;
-}
-
-.diary-inside{
-    position:absolute;
-    inset:0;
-    border-radius:9px 16px 16px 9px;
-    overflow:hidden;
-    background:#2a160b;
-    box-shadow:
-        inset 0 0 0 5px #321a0c,
-        inset 0 0 45px rgba(0,0,0,.8),
-        0 0 0 1px rgba(10,5,2,.9);
-}
-
-.book-spine{display:none}
-
-.diary-page{
-    display:none!important;
-    position:absolute!important;
-    inset:0!important;
-    width:100%!important;
-    height:100%!important;
-    padding:clamp(42px,5vw,65px) clamp(38px,6vw,78px) clamp(48px,5vw,62px)!important;
-    overflow:hidden!important;
-    color:#332113!important;
-    border-radius:4px 12px 12px 4px!important;
-    border:1px solid rgba(89,57,25,.55)!important;
-    background:
-        radial-gradient(ellipse at 4% 4%,rgba(91,49,17,.30),transparent 25%),
-        radial-gradient(ellipse at 97% 6%,rgba(118,70,28,.22),transparent 24%),
-        radial-gradient(ellipse at 92% 96%,rgba(80,39,13,.30),transparent 28%),
-        radial-gradient(ellipse at 5% 92%,rgba(76,38,14,.25),transparent 24%),
-        linear-gradient(104deg,#a9824d 0%,#d9c18a 10%,#e5d09a 48%,#d5bd83 88%,#a97e49 100%);
-    box-shadow:
-        inset 22px 0 28px rgba(61,31,10,.20),
-        inset -25px 0 35px rgba(62,33,12,.25),
-        inset 0 22px 35px rgba(255,238,184,.16),
-        inset 0 -25px 35px rgba(69,35,12,.25),
-        5px 0 12px rgba(0,0,0,.22);
-    clip-path:polygon(1% 1%,8% 2%,16% 1%,26% 2%,38% 1%,51% 2%,63% 1%,75% 2%,87% 1%,98% 3%,99% 12%,98% 25%,100% 38%,98% 51%,99% 66%,97% 79%,99% 91%,96% 99%,84% 98%,72% 100%,59% 98%,46% 99%,33% 98%,20% 100%,8% 98%,1% 96%,2% 84%,0 70%,2% 56%,1% 43%,2% 29%,0 16%);
-    transform-origin:right center;
-    backface-visibility:hidden;
-    will-change:transform,opacity;
-}
-
-/* sợi giấy + vết ố + nhiễu giấy */
-.diary-page::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    opacity:.62!important;
-    background-image:
-        radial-gradient(circle at 12% 17%,rgba(66,35,12,.24) 0 1px,transparent 2px),
-        radial-gradient(circle at 73% 31%,rgba(80,42,14,.18) 0 1px,transparent 2px),
-        radial-gradient(circle at 42% 78%,rgba(65,33,11,.16) 0 1px,transparent 2px),
-        repeating-linear-gradient(0deg,rgba(76,45,18,.025) 0 1px,transparent 1px 4px),
-        repeating-linear-gradient(90deg,rgba(255,244,196,.035) 0 1px,transparent 1px 5px);
-    background-size:43px 47px,71px 63px,83px 79px,auto,auto;
-    mix-blend-mode:multiply;
-}
-
-.diary-page::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    box-shadow:
-        inset 0 0 38px rgba(57,28,9,.34),
-        inset 0 0 95px rgba(87,48,17,.16);
-}
-
-.diary-page.current{
-    display:block!important;
-    animation:antiquePageAppear .38s ease both;
-}
-.diary-page.flip-next{
-    display:block!important;
-    animation:antiqueFlipNext .78s cubic-bezier(.55,.08,.22,1) both;
-    z-index:80;
-}
-.diary-page.flip-prev{
-    display:block!important;
-    animation:antiqueFlipPrev .78s cubic-bezier(.55,.08,.22,1) both;
-    z-index:80;
-}
-
-@keyframes antiquePageAppear{
-    from{opacity:.25;transform:rotateY(-5deg) scale(.992);filter:brightness(.82)}
-    to{opacity:1;transform:rotateY(0) scale(1);filter:brightness(1)}
-}
-@keyframes antiqueFlipNext{
-    0%{opacity:1;transform:rotateY(0);filter:brightness(1)}
-    48%{filter:brightness(.72)}
-    100%{opacity:.08;transform:rotateY(-178deg);filter:brightness(.52)}
-}
-@keyframes antiqueFlipPrev{
-    0%{opacity:1;transform:rotateY(0);filter:brightness(1)}
-    48%{filter:brightness(.72)}
-    100%{opacity:.08;transform:rotateY(178deg);filter:brightness(.52)}
-}
-
-.diary-content{
-    position:relative;
-    z-index:2;
-    height:100%;
-    overflow:hidden!important;
-    padding-right:4px;
-}
-
-.diary-text{
-    font-family:Georgia,"Times New Roman",serif!important;
-    font-size:clamp(13px,1.35vw,17px)!important;
-    line-height:1.62!important;
-    color:#392515!important;
-    text-shadow:0 .2px 0 rgba(70,38,14,.18);
-}
-.diary-text p{margin-bottom:11px!important}
-.diary-heading{
-    font-family:Georgia,"Times New Roman",serif!important;
-    font-size:clamp(23px,3vw,34px)!important;
-    color:#4a2b16!important;
-    text-shadow:1px 1px 0 rgba(255,239,183,.3),0 1px 2px rgba(52,27,9,.25);
-    margin-bottom:14px!important;
-}
-.diary-date{
-    font-family:Georgia,"Times New Roman",serif!important;
-    font-size:clamp(18px,2.2vw,27px)!important;
-    color:#6a3b1d!important;
-    letter-spacing:.8px;
-    border-bottom:1px solid rgba(92,53,22,.35);
-    padding-bottom:7px;
-    margin-bottom:13px!important;
-}
-
-.diary-page-number{
-    bottom:14px!important;
-    left:50%!important;
-    right:auto!important;
-    transform:translateX(-50%)!important;
-    color:rgba(76,42,18,.58)!important;
-    font:italic 12px Georgia,serif!important;
-}
-.diary-note{
-    bottom:14px!important;
-    color:rgba(76,42,18,.55)!important;
-    font:italic 11px Georgia,serif!important;
-}
-
-/* Bìa sách */
-.diary-cover{
-    border-radius:10px 18px 18px 10px!important;
-    background:
-        radial-gradient(circle at 18% 22%,rgba(218,171,99,.20),transparent 19%),
-        radial-gradient(circle at 77% 75%,rgba(20,8,2,.34),transparent 24%),
-        repeating-linear-gradient(94deg,rgba(255,224,164,.035) 0 2px,rgba(0,0,0,.035) 2px 5px),
-        linear-gradient(112deg,#241006,#5c3418 20%,#70421e 48%,#4b2812 78%,#211006);
-    box-shadow:
-        inset 10px 0 18px rgba(0,0,0,.65),
-        inset -10px 0 20px rgba(0,0,0,.42),
-        inset 0 0 55px rgba(0,0,0,.48),
-        7px 7px 0 rgba(23,10,4,.75),
-        0 18px 35px rgba(0,0,0,.58)!important;
-    border:2px solid rgba(116,73,34,.55)!important;
-}
-.diary-cover::before{
-    content:"";
-    position:absolute;
-    inset:17px;
-    border:1px solid rgba(202,158,91,.42);
-    border-radius:5px 12px 12px 5px;
-    box-shadow:inset 0 0 25px rgba(0,0,0,.35),0 0 0 4px rgba(44,21,9,.25);
-    pointer-events:none;
-}
-.diary-cover::after{
-    content:"";
-    position:absolute;
-    left:20px;
-    right:20px;
-    top:50%;
-    height:1px;
-    background:linear-gradient(90deg,transparent,rgba(211,167,99,.28),transparent);
-    pointer-events:none;
-}
-.cover-title{
-    font-family:Georgia,"Times New Roman",serif!important;
-    color:#d9b56e!important;
-    font-size:clamp(42px,7vw,76px)!important;
-    letter-spacing:5px!important;
-    text-shadow:2px 2px 0 #281107,0 3px 12px rgba(0,0,0,.7)!important;
-}
-.cover-symbol{
-    color:#c79b59!important;
-    filter:sepia(1) saturate(.7);
-    text-shadow:0 2px 7px rgba(0,0,0,.7)!important;
-}
-.cover-open-hint{
-    color:rgba(222,190,132,.72)!important;
-    font:italic 13px Georgia,serif!important;
-    letter-spacing:1.2px;
-}
-
-.diary-hint{
-    position:absolute;
-    left:50%;
-    bottom:-42px;
-    transform:translateX(-50%);
-    z-index:500;
-    color:#e1c48b;
-    background:rgba(28,14,7,.9);
-    border:1px solid rgba(196,149,78,.42);
-    padding:8px 16px;
-    border-radius:3px;
-    font:italic 13px Georgia,serif;
-    white-space:nowrap;
-    box-shadow:0 7px 20px rgba(0,0,0,.45);
-}
-#diaryClose{
-    position:absolute;
-    top:-43px;
-    right:0;
-    z-index:500;
-    width:36px;
-    height:36px;
-    border:1px solid rgba(198,151,83,.5);
-    border-radius:50%;
-    color:#e0c08a;
-    background:#251208;
-    cursor:pointer;
-    font-size:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.45);
-}
-
-@media(max-width:700px){
-    .diary-book{width:94vw;height:min(720px,80dvh)}
-    .diary-page{padding:34px 27px 43px!important}
-    .diary-text{font-size:13.5px!important;line-height:1.54!important}
-    .diary-heading{font-size:23px!important}
-    .diary-date{font-size:20px!important}
-    .diary-hint{bottom:-43px;font-size:11px;padding:7px 11px}
-    #diaryClose{top:-43px}
-}
-@media(max-height:650px){
-    .diary-book{height:76dvh}
-    .diary-page{padding-top:25px!important;padding-bottom:34px!important}
-    .diary-text{font-size:12px!important;line-height:1.46!important}
-    .diary-heading{font-size:20px!important}
-    .diary-date{font-size:17px!important}
-}
-
-
-/* =========================================================
-   DIARY FIX — NIGHT SKY + MOSS GREEN OLD COVER + STABLE PAGES
-   ========================================================= */
-#diaryOverlay{
-    isolation:isolate;
-    overflow:hidden;
-    background:#050914 !important;
-}
-
-#diaryOverlay .diary-night-sky{
-    position:absolute;
-    inset:0;
-    z-index:0;
-    pointer-events:none;
-    overflow:hidden;
-    background:
-        radial-gradient(circle at 50% 20%,rgba(56,78,128,.28),transparent 36%),
-        radial-gradient(circle at 20% 80%,rgba(18,37,75,.32),transparent 40%),
-        linear-gradient(180deg,#030711 0%,#071226 52%,#02050d 100%);
-}
-#diaryOverlay .diary-moon{
-    position:absolute;
-    width:clamp(90px,10vw,145px);
-    height:clamp(90px,10vw,145px);
-    right:clamp(7%,10vw,16%);
-    top:clamp(7%,9vh,13%);
-    border-radius:50%;
-    background:radial-gradient(circle at 35% 32%,#fffdf1 0 34%,#f6edc7 58%,#d9d1ac 100%);
-    box-shadow:0 0 25px rgba(255,247,207,.7),0 0 75px rgba(185,205,255,.28);
-}
-#diaryOverlay .diary-moon::after{
-    content:"";
-    position:absolute;
-    width:18%;height:18%;left:22%;top:25%;border-radius:50%;
-    background:rgba(150,145,122,.15);
-    box-shadow:35px 25px 0 rgba(150,145,122,.12),58px 8px 0 rgba(150,145,122,.10),22px 58px 0 rgba(150,145,122,.10);
-}
-#diaryOverlay .diary-stars{position:absolute;inset:0;}
-#diaryOverlay .diary-star{
-    position:absolute;
-    display:block;
-    border-radius:50%;
-    background:#fffdf0;
-    box-shadow:0 0 6px rgba(255,255,255,.85);
-    animation:diaryStarTwinkle ease-in-out infinite alternate;
-}
-@keyframes diaryStarTwinkle{from{opacity:.28;transform:scale(.7)}to{opacity:1;transform:scale(1.35)}}
-
-#diaryOverlay .diary-book{
-    z-index:5 !important;
-    width:min(980px,94vw) !important;
-    height:min(720px,84dvh) !important;
-    perspective:2400px !important;
-    filter:drop-shadow(0 30px 35px rgba(0,0,0,.78)) !important;
-}
-
-/* Bìa xanh rêu cũ kỹ */
-#diaryOverlay .diary-cover{
-    z-index:200 !important;
-    background:
-        radial-gradient(circle at 25% 20%,rgba(177,190,136,.16),transparent 24%),
-        radial-gradient(circle at 75% 78%,rgba(20,34,21,.32),transparent 30%),
-        repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 5px),
-        linear-gradient(135deg,#34442f 0%,#59664a 30%,#414f38 55%,#303d2c 78%,#202b20 100%) !important;
-    border:9px solid #1d281c !important;
-    box-shadow:
-        inset 0 0 0 2px rgba(151,160,112,.28),
-        inset 0 0 45px rgba(0,0,0,.68),
-        15px 0 30px rgba(0,0,0,.55) !important;
-}
-#diaryOverlay .diary-cover::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    opacity:.28;
-    background:
-        radial-gradient(circle at 12% 20%,#182218 0 1px,transparent 2px),
-        radial-gradient(circle at 72% 65%,#10180f 0 1px,transparent 2px);
-    background-size:47px 53px,61px 67px;
-    mix-blend-mode:multiply;
-}
-#diaryOverlay .cover-decoration{
-    border-color:rgba(176,185,132,.42) !important;
-}
-#diaryOverlay .cover-decoration::before{border-color:rgba(191,198,151,.24) !important}
-#diaryOverlay .cover-symbol{color:#b8c095 !important;text-shadow:0 0 18px rgba(185,196,145,.18) !important}
-#diaryOverlay .cover-title{color:#d2d7b1 !important;text-shadow:2px 2px 0 #1b2419,0 0 20px rgba(180,195,140,.14) !important}
-#diaryOverlay .cover-open-hint{color:rgba(211,216,181,.72) !important}
-
-#diaryOverlay .diary-inside{
-    z-index:10 !important;
-    background:#263023 !important;
-    border-radius:10px 16px 16px 10px !important;
-}
-
-/* Tờ giấy phẳng, chỉ bo hai góc ở mép ngoài */
-#diaryOverlay .diary-page{
-    display:none !important;
-    position:absolute !important;
-    inset:0 !important;
-    width:100% !important;
-    height:100% !important;
-    padding:clamp(38px,5vw,64px) clamp(42px,6vw,78px) clamp(42px,5vw,58px) !important;
-    overflow:hidden !important;
-    border:0 !important;
-    clip-path:none !important;
-    color:#342d21 !important;
-    background:
-        repeating-linear-gradient(to bottom,transparent 0,transparent 30px,rgba(93,96,89,.18) 31px,transparent 32px),
-        radial-gradient(circle at 8% 8%,rgba(117,91,51,.10),transparent 25%),
-        radial-gradient(circle at 92% 90%,rgba(117,91,51,.10),transparent 27%),
-        linear-gradient(105deg,#cdbd91,#e1d4ad 18%,#e7dbb8 52%,#ded0a6 84%,#c8b787) !important;
-    box-shadow:inset 0 0 45px rgba(70,50,25,.18),5px 0 12px rgba(0,0,0,.22) !important;
-    transform-origin:center center !important;
-    backface-visibility:hidden !important;
-    transform-style:preserve-3d !important;
-    will-change:transform,opacity,filter !important;
-}
-#diaryOverlay .diary-page.current{
-    display:block !important;
-    opacity:1 !important;
-    transform:rotateY(0deg) !important;
-    animation:none !important;
-    z-index:60 !important;
-}
-#diaryOverlay .diary-page.page-under{
-    display:block !important;
-    opacity:1 !important;
-    transform:rotateY(0deg) !important;
-    animation:none !important;
-    z-index:20 !important;
-}
-#diaryOverlay .diary-page.flip-next{
-    display:block !important;
-    z-index:60 !important;
-    transform-origin:left center !important;
-    animation:diaryRealFlipNext .82s cubic-bezier(.62,.08,.24,1) forwards !important;
-}
-#diaryOverlay .diary-page.flip-prev{
-    display:block !important;
-    z-index:60 !important;
-    transform-origin:right center !important;
-    animation:diaryRealFlipPrev .82s cubic-bezier(.62,.08,.24,1) forwards !important;
-}
-@keyframes diaryRealFlipNext{
-    0%{transform:rotateY(0deg);filter:brightness(1);box-shadow:inset 0 0 45px rgba(70,50,25,.18),5px 0 12px rgba(0,0,0,.22)}
-    45%{filter:brightness(.72);box-shadow:inset -18px 0 35px rgba(0,0,0,.20),-12px 0 25px rgba(0,0,0,.25)}
-    100%{transform:rotateY(-180deg);filter:brightness(.52);box-shadow:inset -30px 0 55px rgba(0,0,0,.30),-20px 0 35px rgba(0,0,0,.34)}
-}
-@keyframes diaryRealFlipPrev{
-    0%{transform:rotateY(0deg);filter:brightness(1);box-shadow:inset 0 0 45px rgba(70,50,25,.18),5px 0 12px rgba(0,0,0,.22)}
-    45%{filter:brightness(.72);box-shadow:inset 18px 0 35px rgba(0,0,0,.20),12px 0 25px rgba(0,0,0,.25)}
-    100%{transform:rotateY(180deg);filter:brightness(.52);box-shadow:inset 30px 0 55px rgba(0,0,0,.30),20px 0 35px rgba(0,0,0,.34)}
-}
-
-#diaryOverlay .diary-page::before{
-    opacity:.55 !important;
-    background-image:
-        radial-gradient(circle at 12% 17%,rgba(66,35,12,.18) 0 1px,transparent 2px),
-        radial-gradient(circle at 73% 31%,rgba(80,42,14,.13) 0 1px,transparent 2px),
-        repeating-linear-gradient(0deg,rgba(76,45,18,.018) 0 1px,transparent 1px 4px) !important;
-    mix-blend-mode:multiply;
-}
-#diaryOverlay .diary-page::after{
-    box-shadow:inset 0 0 38px rgba(57,28,9,.22),inset 0 0 80px rgba(87,48,17,.10) !important;
-}
-#diaryOverlay .diary-content{
-    height:100% !important;
-    overflow:hidden !important;
-    padding-right:0 !important;
-}
-#diaryOverlay .diary-text{
-    position:relative;
-    z-index:5;
-    font-size:clamp(15px,1.45vw,18px) !important;
-    line-height:1.88 !important;
-}
-#diaryOverlay .diary-text p{margin-bottom:18px !important}
-
-@media(max-width:700px){
-    #diaryOverlay{padding:10px !important}
-    #diaryOverlay .diary-book{width:96vw !important;height:84dvh !important}
-    #diaryOverlay .diary-page{
-        padding:34px 28px 42px !important;
-        border-radius:0 13px 13px 0 !important;
+    .diary-book {
+        width: 96vw;
+        height: 78vh;
     }
-    #diaryOverlay .diary-moon{right:7%;top:6%;width:82px;height:82px}
-    #diaryOverlay .diary-text{font-size:15px !important;line-height:1.72 !important}
+
+    .diary-pages {
+        padding: 8px;
+    }
+
+    .diary-page {
+        top: 8px;
+        bottom: 8px;
+
+        width: calc(50% - 8px);
+
+        padding:
+            25px 18px;
+    }
+
+    .diary-page.left {
+        left: 8px;
+    }
+
+    .diary-page.right {
+        right: 8px;
+    }
+
+    .diary-page h2 {
+        font-size: 23px;
+        margin-bottom: 15px;
+    }
+
+    .diary-text {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .diary-text p {
+        margin-bottom: 9px;
+    }
+
+    .diary-note {
+        font-size: 9px;
+    }
+
+    .book-spine {
+        width: 13px;
+    }
+
+    .cover-decoration {
+        inset: 25px;
+    }
+
+    .cover-title {
+        max-width: 80%;
+
+        font-size: 27px;
+    }
+
+    .cover-subtitle {
+        bottom: 20px;
+
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .diary-navigation {
+        bottom: 10px;
+    }
+
+    .diary-navigation button {
+        padding:
+            6px 9px;
+
+        min-width: 38px;
+
+        font-size: 11px;
+    }
+
+    .diary-open-button {
+        left: 12px;
+        bottom: 12px;
+
+        padding:
+            10px 15px;
+
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+MOBILE NHỎ
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .diary-book {
+        height: 72vh;
+    }
+
+    .diary-page {
+        padding:
+            19px 12px;
+    }
+
+    .diary-text {
+        font-size: 10.5px;
+        line-height: 1.48;
+    }
+
+    .diary-page h2 {
+        font-size: 19px;
+    }
+
+    .diary-date {
+        font-size: 15px;
+    }
+
+    .diary-note {
+        font-size: 8px;
+    }
+
+    .cover-title {
+        font-size: 23px;
+    }
 }
 
 </style>
-
 </head>
 
 <body>
@@ -2540,50 +1951,18 @@ MƯA
 ========================================================= -->
 
 <div id="rainContainer"></div>
-<div id="snowContainer" aria-hidden="true"></div>
-<div id="celebrationScene" aria-hidden="true">
-  <div class="celebration-sun"></div><div class="rainbow"></div><div class="meadow"></div>
-  <div class="dancing-animal animal1">🦌</div><div class="dancing-animal animal2">🐇</div>
-  <div class="dancing-animal animal3">🦋</div><div class="dancing-animal animal4">🐑</div>
-</div>
 
 <!-- =========================================================
-TRÁI TIM BAY
+TRÁI TIM / SAO BAY
 ========================================================= -->
 
-<div class="heart" style="left:5%;font-size:25px;">
-    💙
-</div>
-
-<div class="heart"
-     style="left:15%;font-size:30px;animation-delay:2s;">
-    ✨
-</div>
-
-<div class="heart"
-     style="left:28%;font-size:22px;animation-delay:4s;">
-    💙
-</div>
-
-<div class="heart"
-     style="left:42%;font-size:30px;animation-delay:1s;">
-    ✨
-</div>
-
-<div class="heart"
-     style="left:57%;font-size:25px;animation-delay:3s;">
-    💙
-</div>
-
-<div class="heart"
-     style="left:72%;font-size:30px;animation-delay:5s;">
-    ✨
-</div>
-
-<div class="heart"
-     style="left:87%;font-size:24px;animation-delay:2s;">
-    💙
-</div>
+<div class="heart" style="left:5%;font-size:25px;">💙</div>
+<div class="heart" style="left:15%;font-size:30px;animation-delay:2s;">✨</div>
+<div class="heart" style="left:28%;font-size:22px;animation-delay:4s;">💙</div>
+<div class="heart" style="left:42%;font-size:30px;animation-delay:1s;">✨</div>
+<div class="heart" style="left:57%;font-size:25px;animation-delay:3s;">💙</div>
+<div class="heart" style="left:72%;font-size:30px;animation-delay:5s;">✨</div>
+<div class="heart" style="left:87%;font-size:24px;animation-delay:2s;">💙</div>
 
 
 <!-- =========================================================
@@ -2592,40 +1971,37 @@ TRANG 1
 
 <section class="screen active" id="intro">
 
-<div class="glass-box">
+    <div class="glass-box">
 
-<div class="rose">
+        <div class="rose">
 
-    <div class="petal p1"></div>
-    <div class="petal p2"></div>
-    <div class="petal p3"></div>
-    <div class="petal p4"></div>
-    <div class="petal p5"></div>
-    <div class="petal p6"></div>
-    <div class="petal p7"></div>
-    <div class="petal p8"></div>
+            <div class="petal p1"></div>
+            <div class="petal p2"></div>
+            <div class="petal p3"></div>
+            <div class="petal p4"></div>
+            <div class="petal p5"></div>
+            <div class="petal p6"></div>
+            <div class="petal p7"></div>
+            <div class="petal p8"></div>
 
-    <div class="rose-center"></div>
+            <div class="rose-center"></div>
 
-</div>
+        </div>
 
-<h1 class="title">
-    Trân trọng
-</h1>
+        <h1 class="title">
+            Trân trọng
+        </h1>
 
-<p class="text center-text">
+        <p class="text center-text">
+            Tên tôi là ########## và tôi có đôi điều
+            muốn gửi đến #############.
+        </p>
 
-    ### tên là ##########
-    và ### có đôi điều muốn gửi đến
-    #############.
+        <button class="btn" id="introNext">
+            Đọc tiếp
+        </button>
 
-</p>
-
-<button class="btn" id="introNext">
-    Đọc tiếp
-</button>
-
-</div>
+    </div>
 
 </section>
 
@@ -2636,24 +2012,22 @@ TRANG LƯU Ý
 
 <section class="screen" id="warningPage">
 
-<div class="glass-box">
+    <div class="glass-box">
 
-<h1 class="title">
-    Một chút trước khi bắt đầu...
-</h1>
+        <h1 class="title">
+            Một chút trước khi bắt đầu...
+        </h1>
 
-<p class="text center-text">
+        <p class="text center-text">
+            Lưu ý: mọi sự lựa chọn đều chỉ có 1 lần
+            hãy suy nghĩ kĩ.
+        </p>
 
-    Lưu ý: mọi sự lựa chọn đều chỉ có 1 lần
-    hãy suy nghĩ kĩ.
+        <button class="btn" id="warningNext">
+            Đọc tiếp
+        </button>
 
-</p>
-
-<button class="btn" id="warningNext">
-    Đọc tiếp
-</button>
-
-</div>
+    </div>
 
 </section>
 
@@ -2664,27 +2038,25 @@ TRANG TÂM Ý
 
 <section class="screen" id="truthPage">
 
-<div class="glass-box">
+    <div class="glass-box">
 
-<h1 class="title">
-    Trước khi đến với trang tiếp...
-</h1>
+        <h1 class="title">
+            Trước khi đến với trang tiếp...
+        </h1>
 
-<p class="text center-text">
+        <p class="text center-text">
+            trước khi đến với trang tiếp
+            ### muốn nói rằng trang web này ### làm
+            bằng sự tâm huyết và những lời trong đó
+            đều là thật lòng chứ không phải để trêu
+            đùa #### như lần trước nữa.
+        </p>
 
-    trước khi đến với trang tiếp
-    ### muốn nói rằng trang web này ### làm
-    bằng sự tâm huyết và những lời trong đó
-    đều là thật lòng chứ không phải để trêu
-    đùa ############# như lần trước nữa.
+        <button class="btn" id="truthNext">
+            Xem tiếp
+        </button>
 
-</p>
-
-<button class="btn" id="truthNext">
-    Xem tiếp
-</button>
-
-</div>
+    </div>
 
 </section>
 
@@ -2695,441 +2067,429 @@ TRANG KỈ NIỆM
 
 <section class="screen" id="memory">
 
-<div class="memory-container">
+    <div class="memory-container">
 
+        <!-- SLIDE 1 -->
 
-<!-- SLIDE 1 -->
+        <div class="memory-slide active">
 
-<div class="memory-slide active">
+            <div class="memory-box">
 
-    <div class="memory-box">
+                <h1 class="memory-title">
+                    Ngày đầu tiên mà ### gặp ####
+                </h1>
 
-        <h1 class="memory-title">
-            Ngày đầu tiên mà ### gặp #############
-        </h1>
+                <div class="memory-content">
 
-        <div class="memory-content">
+                    <p>
+                        <strong>Ngày đầu tiên mà ### gặp #### :</strong>
+                        hôm ấy là 1 ngày chán ngắt khi đang
+                        lướt tiktok.
+                    </p>
 
-            <p>
-                <strong>Ngày đầu tiên mà ### gặp #############:</strong>
-                hôm ấy là 1 ngày chán ngắt khi đang
-                lướt tiktok.
-            </p>
+                    <p>
+                        ### lướt trúng video nokotan của ####.
+                        thông thường thì ### sẽ không hứng thú
+                        với những video như vậy lắm cơ bản là
+                        trước ### cũng gặp video của linh rùa
+                        có nội dung shitpost chết não thế,
+                        ### còn thấy video của #### lúc đó khá
+                        ít tim nên định lướt qua nhưng chả hiểu
+                        sao ### lỡ bấm nhầm vào trang cá nhân ####.
+                    </p>
 
-            <p>
-                ### lướt trúng video nokotan của #############.
-                thông thường thì ### sẽ không hứng thú
-                với những video như vậy lắm cơ bản là
-                trước ### cũng gặp video của linh rùa
-                có nội dung shitpost chết não thế,
-                ### còn thấy video của ############# lúc đó khá
-                ít tim nên định lướt qua nhưng chả hiểu
-                sao ### lỡ bấm nhầm vào trang cá nhân #############.
-            </p>
+                    <p>
+                        lúc đó ### nghĩ đằng nào cũng bấm nhầm
+                        thì xem thêm vài video xem có gì hay
+                        không.
+                    </p>
 
-            <p>
-                lúc đó ### nghĩ đằng nào cũng bấm nhầm
-                thì xem thêm vài video xem có gì hay
-                không.
-            </p>
+                    <p>
+                        cũng khá bình thường thì ### xem lại
+                        video nokotan thì nó hài 1 cách nhảm nhí
+                        ((((((((=
+                    </p>
 
-            <p>
-                cũng khá bình thường thì ### xem lại
-                video nokotan thì nó hài 1 cách nhảm nhí
-                (((((((=
-            </p>
+                    <p>
+                        thế là ### nghĩ ### này thú vị phết
+                        đúng lúc đang chán mình sẽ rủ chơi chung
+                        tại bạn này chưa nổi nên chắc dễ dàng
+                        đồng ý thôi hih.
+                    </p>
 
-            <p>
-                thế là ### nghĩ ### bạn này thú vị phết
-                đúng lúc đang chán mình sẽ rủ chơi chung
-                tại bạn này chưa nổi nên chắc dễ dàng
-                đồng ý thôi hih.
-            </p>
+                    <p>
+                        (òm nói thật là ### không biết #### là nữ
+                        cho đến khi bắt đầu nói chuyện được và
+                        ### còn hỏi giới tính #### nếu ####
+                        còn nhớ ((((= )
+                    </p>
 
-            <p>
-                (òm nói thật là ### không biết #############
-                là nữ cho đến khi bắt đầu nói chuyện được và
-                ### còn hỏi giới tính ############# nếu #############
-                còn nhớ ((((= )
-            </p>
+                </div>
 
-        </div>
+                <button class="memory-next" data-next>
+                    Đọc tiếp →
+                </button>
 
-        <button class="memory-next" data-next>
-            Đọc tiếp →
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- SLIDE 2 -->
-
-<div class="memory-slide">
-
-    <div class="memory-box">
-
-        <h1 class="memory-title">
-            Một vài thứ trong lúc làm quen nhau
-        </h1>
-
-        <div class="memory-content">
-
-            <p>
-                ### thấy khá kì lạ là cô bạn này như thể
-                khá kiệm lời và có vẻ không thích nói
-                chuyện với mình những vẫn rep tin nhắn
-                mình khá nhiệt tình mặc dù hơi nhạt với
-                không khơi gợi thêm chuyện gì toàn để
-                mình nói.
-            </p>
-
-            <p>
-                ờm ### đã tưởng mà ############# chỉ lịch sự xã giao
-                và ### có khả năng là sẽ không có cơ hội
-                nếu đột nhiên cảm thấy thích ############# trong
-                tương lai nên định chỉ làm bạn.
-            </p>
-
-            <p>
-                nhưng có đợt ### với ############# chơi game với
-                nhau thì có ông ### nào đấy ############# rủ chơi
-                cùng sau vài trận thì ông ### đấy nghỉ
-                và bắt đầu qua tiktok làm phiền #############
-                và ############# cũng ngỏ ý với ### là ông này có vấn đề
-                nên ### giúp ############# một chút.
-            </p>
-
-            <p>
-                khi ấy ### mới nhận ra ############# của khi đó
-                vẫn chỉ là 1 cô gái yếu đuối dễ bị thao
-                túng và chi phối cảm xúc.
-            </p>
-
-            <p>
-                Một kiểu người rất dễ bị tổn thương tâm
-                lý thậm chí là PTSD nếu tiếp xúc và quen
-                những người như kiểu ông ### hôm ấy.
-            </p>
-
-            <p>
-                đêm ấy ### nghĩ là có lẽ ### nên làm
-                1 điểm tựa vững chắc cho ############# để #############
-                không gặp phải những người như vậy nữa vì về
-                cơ bản thì content của ############# cực kì thu hút
-                những người có tư tưởng "ăn sẵn?" idk.
-            </p>
-
-            <p>
-                kiểu người đó khi thấy 1 người làm nội
-                dung ít nổi tiếng còn dễ nói chuyện,
-                hướng nội và hơn hết còn là con gái họ
-                thường có tâm lý nghĩ ############# sẽ là 1 con mồi
-                béo bở để nói chuyện kết nối và thao túng.
-            </p>
-
-            <p>
-                Thì hơi không thuần khiết lắm nhưng tóm
-                lại mà lý do đầu tiên mà ### muốn làm
-                người yêu của ############# thì không phải là chúng
-                mình hợp nhau hay nói chuyện hợp hay sở
-                thích bla blo mà đơn giản ### muốn bảo vệ
-                ############# khỏi những thứ xấu ngoài kia (((
-            </p>
+            </div>
 
         </div>
 
-        <button class="memory-next" data-next>
-            Đọc tiếp →
-        </button>
 
-    </div>
+        <!-- SLIDE 2 -->
 
-</div>
+        <div class="memory-slide">
 
+            <div class="memory-box">
 
-<!-- SLIDE 3 -->
+                <h1 class="memory-title">
+                    Một vài thứ trong lúc làm quen nhau
+                </h1>
 
-<div class="memory-slide">
+                <div class="memory-content">
 
-    <div class="memory-box">
+                    <p>
+                        ### thấy khá kì lạ là cô bạn này như thể
+                        khá kiệm lời và có vẻ không thích nói
+                        chuyện với mình những vẫn rep tin nhắn
+                        mình khá nhiệt tình mặc dù hơi nhạt với
+                        không khơi gợi thêm chuyện gì toàn để
+                        mình nói.
+                    </p>
 
-        <h1 class="memory-title">
-            Nếu được thì ### muốn ############# đọc hết những dòng
-            mà ### yapping của ### về những dòng suy nghĩ
-            của ### từ lúc quen ############# mà có thể là #############
-            chưa biết
-        </h1>
+                    <p>
+                        ờm ### đã tưởng mà #### chỉ lịch sự xã giao
+                        và ### có khả năng là sẽ không có cơ hội
+                        nếu đột nhiên cảm thấy thích #### trong
+                        tương lai nên định chỉ làm bạn.
+                    </p>
 
-        <div class="memory-content">
+                    <p>
+                        nhưng có đợt ### với #### chơi game với
+                        nhau thì có ông anh nào đấy #### rủ chơi
+                        cùng sau vài trận thì ông anh đấy nghỉ
+                        và bắt đầu qua tiktok làm phiền #### và ####
+                        cũng ngỏ ý với ### là ông này có vấn đề
+                        nên ### giúp #### một chút.
+                    </p>
 
-            <p>
-                thật sự thì trong khoảng thời gian chúng
-                mình yêu nhau ### nhận ra khá nhiều điều
-                mà lúc trước khi yêu ############# ### không làm như hỏi
-                thăm hay quan tâm hay kể chuyện linh tinh
-                và đủ can đảm lần đầu bật mic nói chuyện
-                với ### mặc dù ### nói thì ############# nghe câu
-                tịt câu điếc (((= đáng yêu vl thề ### nhớ
-                nhất hôm ấy.
-            </p>
+                    <p>
+                        khi ấy ### mới nhận ra #### của khi đó
+                        vẫn chỉ là 1 cô gái yếu đuối dễ bị thao
+                        túng và chi phối cảm xúc.
+                    </p>
 
-            <p>
-                từ hôm đó ### bắt đầu yêu #############.
-            </p>
+                    <p>
+                        Một kiểu người rất dễ bị tổn thương tâm
+                        lý thậm chí là PTSD nếu tiếp xúc và quen
+                        những người như kiểu ông anh hôm ấy.
+                    </p>
 
-            <p>
-                <strong>Ngày mà chúng ta bắt đầu lìa xa:</strong>
-                hôm đó thì ### nhớ là ############# chụp ### với
-                bạn vy chơi và cả 2 có cùng số phút chơi
-                giống nhau nên ############# hiểu lầm là ### chán #############
-                và theo bạn kia "xinh hơn giọng ngọt hơn
-                hoạt bát hơn???? lúc đấy ############# nói thế ###
-                cũng không biết".
-            </p>
+                    <p>
+                        đêm ấy ### nghĩ là có lẽ ### nên làm
+                        1 điểm tựa vững chắc cho #### để #### không
+                        gặp phải những người như vậy nữa vì về
+                        cơ bản thì content của #### cực kì thu hút
+                        những người có tư tưởng "ăn sẵn?" idk.
+                    </p>
 
-            <p>
-                sau đó ############# chặn ### mọi nền tảng omg.
-            </p>
+                    <p>
+                        kiểu người đó khi thấy 1 người làm nội
+                        dung ít nổi tiếng còn dễ nói chuyện,
+                        hướng nội và hơn hết còn là con gái họ
+                        thường có tâm lý nghĩ #### sẽ là 1 con mồi
+                        béo bở để nói chuyện kết nối và thao túng.
+                    </p>
 
-            <p>
-                ### tìm được ins là ############# chưa block sau đó
-                thì cả 2 có giải thích với nhau mọi chuyện
-                nhưng chẳng đi đến đâu.
-            </p>
+                    <p>
+                        Thì hơi không thuần khiết lắm nhưng tóm
+                        lại mà lý do đầu tiên mà ### muốn làm
+                        người yêu của #### thì không phải là chúng
+                        mình hợp nhau hay nói chuyện hợp hay sở
+                        thích bla blo mà đơn giản ### muốn bảo vệ
+                        #### khỏi những thứ xấu ngoài kia (((=
+                    </p>
 
-            <p>
-                bằng 1 sự ấu trĩ nhất thời ### đã nghĩ
-                là có lẽ chúng ta nên chia tay thì hợp lý
-                hơn....
-            </p>
+                </div>
 
-            <p>
-                ### không thể nói rằng ############# sai vì #############
-                hồi đó đơn giản chỉ là vì yêu ### mà hiểu lầm còn
-                ### thì quá trẻ con ấu trĩ.
-            </p>
+                <button class="memory-next" data-next>
+                    Đọc tiếp →
+                </button>
 
-            <p>
-                cho ### xin lỗi ngày hôm đó nhé.
-            </p>
-
-            <p>
-                ### nghĩ đã làm tổn thương #############.
-            </p>
-
-            <p>
-                <strong>Dạo gần đây:</strong>
-                Từ lúc ### chia tay bạn kia thì ### hầu
-                như không có ### để trò chuyện hay tâm sự
-                linh tinh.
-            </p>
-
-            <p>
-                kiểu bạn của ### toàn con trai mà con trai
-                đi tâm sự 1 số chuyện bla blo với nhau nó
-                không hay lắm nên ### mới nhớ ra #############.
-            </p>
-
-            <p>
-                Thì mọi chuyện vẫn diễn ra bình thường
-                thôi như ############# đang thấy nhưng ### thấy cả 2
-                như đang thoải mái hơn với nhau bằng cách
-                cho nhau thời gian hơn so với lúc trước.
-            </p>
-
-            <p>
-                ### thấy khá thoải mái.
-            </p>
-
-            <p>
-                dạo này thì ### với ############# cũng nói chuyện
-                nhiều hơn và ### cũng thấy ############# cởi mở hơn
-                trước nhiều.
-            </p>
-
-            <p>
-                ### thực sự thích điều ấy.
-            </p>
-
-            <p>
-                có lần ############# kể với ### là ############# học cùng lớp
-                với crush cũ,trong một thoáng chốc ### thấy
-                như tim bị khựng lại 1 chút nhưng ### cũng
-                không nghĩ nhiều.
-            </p>
-
-            <p>
-                Nhưng những lần sau mà ############# kể
-                như việc gặp được crush cũ nên vui,hay
-                crush cũ thi thoảng lại nhìn ############# làm #############
-                vui.
-            </p>
-
-            <p>
-                Có lẽ là ### đã ghen.
-            </p>
-
-            <p>
-                ### không chắc là ############# cố tình đùa ### hay
-                nói thật nhưng mỗi lần như vậy ### lại vô
-                thần nhìn vào những dòng tin nhắn trong
-                ít phút để suy nghĩ và tự trấn an bản thân.
-            </p>
-
-            <p>
-                khi ấy ### biết rằng có lẽ ### lại
-                thích ############# rồi (((=
-            </p>
-
-            <p>
-                Tối ấy ### có thử demo 1 bản web rồi cho
-                ############# xem.
-            </p>
-
-            <p>
-                cái cách ############# trả lời ### thấy rất đáng yêu
-                (((-
-            </p>
-
-            <p>
-                nó bối rồi mà nó kiểu bla blo chả hiểu,
-                không diễn tả được.
-            </p>
-
-            <p>
-                càng làm ### hạ quyết tâm phải tạo ra
-                1 trang web chỉnh chu nhất có thể để nói
-                lên nỗi lòng cũng như những tâm sự của ###.
-            </p>
-
-            <p>
-                Cho kết quả có ra sao thì ### vẫn vui thì
-                lần đầu có người khiến ### hạ quyết tâm
-                tìm hiểu và học hỏi những thứ mà ### nghĩ
-                chỉ dành cho thiên tài mà ### sẽ không bao
-                giờ động vào chỉ để có cảm giác bản thân
-                làm 1 điều gì đấy lớn lao cho người ### thực sự
-                thích chứ không còn là cảm giác
-                thương hại như trước (cùng sự trợ giúp
-                của trí tuệ nhân tạo hih).
-            </p>
-
-            <p>
-                Trước hết thì ### cảm ơn ############# vì những ngày
-                tháng qua.Vui có buồn có tiếc nuối có hạnh
-                phúc có và trên hết là cảm giác mà #############
-                đem lại cho ### khiến ### lại ảo tưởng mình
-                có cơ hội được yêu thêm lần nữa.
-            </p>
-
-            <p>
-                Có thể là ############# sẽ nghĩ ### lè nhè nhưng ###
-                đọc được 1 câu như thế này
-            </p>
-
-            <p>
-                "một tình yêu thực sự thì không thể tóm
-                gọn lại trong vài ba câu chữ được"
-            </p>
-
-            <p>
-                Nên là thông cảm nha ní hihhihih.
-            </p>
+            </div>
 
         </div>
 
-        <button
-            class="memory-link"
-            id="showMemories">
-            Xem kỉ niệm
-        </button>
 
-    </div>
+        <!-- SLIDE 3 -->
 
-</div>
+        <div class="memory-slide">
 
+            <div class="memory-box">
 
-<!-- SLIDE 4 -->
+                <h1 class="memory-title">
+                    Nếu được thì ### muốn #### đọc hết những dòng
+                    mà ### yapping của ### về những dòng suy nghĩ
+                    của ### từ lúc quen #### mà có thể là #### chưa biết
+                </h1>
 
-<div class="memory-slide">
+                <div class="memory-content">
 
-    <div class="memory-box">
+                    <p>
+                        thật sự thì trong khoảng thời gian chúng
+                        mình yêu nhau ### nhận ra khá nhiều điều
+                        mà lúc trước khi yêu #### ### không làm như
+                        hỏi thăm hay quan tâm hay kể chuyện linh tinh
+                        và đủ can đảm lần đầu bật mic nói chuyện
+                        với ### mặc dù ### nói thì #### nghe câu
+                        tịt câu điếc (((= đáng yêu vl thề ### nhớ
+                        nhất hôm ấy.
+                    </p>
 
-        <h1 class="memory-title">
-            Một vài mảnh kỉ niệm mà ### còn lưu lại
-        </h1>
+                    <p>
+                        từ hôm đó ### bắt đầu yêu ####.
+                    </p>
 
-        <div class="memory-content center-text">
+                    <p>
+                        <strong>Ngày mà chúng ta bắt đầu lìa xa:</strong>
+                        hôm đó thì ### nhớ là #### chụp ### với
+                        bạn Vy chơi và cả 2 có cùng số phút chơi
+                        giống nhau nên #### hiểu lầm là ### chán ####
+                        và theo bạn kia "xinh hơn giọng ngọt hơn
+                        hoạt bát hơn???? lúc đấy #### nói thế ### cũng
+                        không biết".
+                    </p>
 
-            <p>
-                Sau tất cả những chuyện đã xảy ra,
-                ### vẫn còn giữ lại một vài thứ.
-            </p>
+                    <p>
+                        sau đó #### chặn ### mọi nền tảng omg.
+                    </p>
 
-            <p>
-                Có thể không còn nhiều,
-                nhưng mỗi thứ còn lại đều mang theo
-                một phần ký ức của chúng ta.
-            </p>
+                    <p>
+                        ### tìm được ins là #### chưa block sau đó
+                        thì cả 2 có giải thích với nhau mọi chuyện
+                        nhưng chẳng đi đến đâu.
+                    </p>
 
-            <p>
-                Nếu ############# muốn xem lại,
-                ### để chúng ở đây.
-            </p>
+                    <p>
+                        bằng 1 sự ấu trĩ nhất thời ### đã nghĩ
+                        là có lẽ chúng ta nên chia tay thì hợp lý
+                        hơn....
+                    </p>
 
-            <a
-                class="drive-button"
-                id="driveLink"
-                href="https://drive.google.com/drive/folders/1vq2OgxAapjXE1hrC9I1rPDIgQulqy_gf"
-                target="_blank"
-                rel="noopener noreferrer">
+                    <p>
+                        ### không thể nói rằng #### sai vì #### hồi đó
+                        đơn giản chỉ là vì yêu ### mà hiểu lầm còn
+                        ### thì quá trẻ con ấu trĩ.
+                    </p>
 
-                💌 Mở kỉ niệm cũ
+                    <p>
+                        cho ### xin lỗi ngày hôm đó nhé.
+                    </p>
 
-            </a>
+                    <p>
+                        ### nghĩ đã làm tổn thương ####.
+                    </p>
+
+                    <p>
+                        <strong>Dạo gần đây:</strong>
+                        Từ lúc ### chia tay bạn kia thì ### hầu
+                        như không có ai để trò chuyện hay tâm sự
+                        linh tinh.
+                    </p>
+
+                    <p>
+                        kiểu bạn của ### toàn con trai mà con trai
+                        đi tâm sự 1 số chuyện bla blo với nhau nó
+                        không hay lắm nên ### mới nhớ ra ####.
+                    </p>
+
+                    <p>
+                        Thì mọi chuyện vẫn diễn ra bình thường
+                        thôi như #### đang thấy nhưng ### thấy cả 2
+                        như đang thoải mái hơn với nhau bằng cách
+                        cho nhau thời gian hơn so với lúc trước.
+                    </p>
+
+                    <p>
+                        ### thấy khá thoải mái.
+                    </p>
+
+                    <p>
+                        dạo này thì ### với #### cũng nói chuyện
+                        nhiều hơn và ### cũng thấy #### cởi mở hơn
+                        trước nhiều.
+                    </p>
+
+                    <p>
+                        ### thực sự thích điều ấy.
+                    </p>
+
+                    <p>
+                        có lần #### kể với ### là #### học cùng lớp
+                        với crush cũ,trong một thoáng chốc ### thấy
+                        như tim bị khựng lại 1 chút nhưng ### cũng
+                        không nghĩ nhiều.
+                    </p>
+
+                    <p>
+                        Nhưng những lần sau mà #### kể như việc gặp
+                        được crush cũ nên vui,hay crush cũ thi
+                        thoảng lại nhìn #### làm #### vui.
+                    </p>
+
+                    <p>
+                        Có lẽ là ### đã ghen.
+                    </p>
+
+                    <p>
+                        ### không chắc là #### cố tình đùa ### hay
+                        nói thật nhưng mỗi lần như vậy ### lại vô
+                        thần nhìn vào những dòng tin nhắn trong
+                        ít phút để suy nghĩ và tự trấn an bản thân.
+                    </p>
+
+                    <p>
+                        khi ấy ### biết rằng có lẽ ### lại
+                        thích #### rồi (((=
+                    </p>
+
+                    <p>
+                        Tối ấy ### có thử demo 1 bản web rồi cho
+                        #### xem.
+                    </p>
+
+                    <p>
+                        cái cách #### trả lời ### thấy rất đáng yêu
+                        (((-
+                    </p>
+
+                    <p>
+                        nó bối rối mà nó kiểu bla blo chả hiểu,
+                        không diễn tả được.
+                    </p>
+
+                    <p>
+                        càng làm ### hạ quyết tâm phải tạo ra
+                        1 trang web chỉnh chu nhất có thể để nói
+                        lên nỗi lòng cũng như những tâm sự của ###.
+                    </p>
+
+                    <p>
+                        Cho kết quả có ra sao thì ### vẫn vui vì
+                        lần đầu có người khiến ### hạ quyết tâm
+                        tìm hiểu và học hỏi những thứ mà ### nghĩ
+                        chỉ dành cho thiên tài mà ### sẽ không bao
+                        giờ động vào chỉ để có cảm giác bản thân
+                        làm 1 điều gì đấy lớn lao cho người ### thực
+                        sự thích chứ không còn là cảm giác
+                        thương hại như trước (cùng sự trợ giúp
+                        của trí tuệ nhân tạo hih).
+                    </p>
+
+                    <p>
+                        Trước hết thì ### cảm ơn #### vì những ngày
+                        tháng qua.Vui có buồn có tiếc nuối có hạnh
+                        phúc có và trên hết là cảm giác mà #### đem
+                        lại cho ### khiến ### lại ảo tưởng mình
+                        có cơ hội được yêu thêm lần nữa.
+                    </p>
+
+                    <p>
+                        Có thể là #### sẽ nghĩ ### lè nhè nhưng ###
+                        đọc được 1 câu như thế này
+                    </p>
+
+                    <p>
+                        "một tình yêu thực sự thì không thể tóm
+                        gọm lại trong vài ba câu chữ được"
+                    </p>
+
+                    <p>
+                        Nên là thông cảm nha ní hihhihih.
+                    </p>
+
+                </div>
+
+                <button
+                    class="memory-link"
+                    id="showMemories">
+                    Xem kỉ niệm
+                </button>
+
+            </div>
 
         </div>
 
-        <button
-            class="btn"
-            id="memoryFinish">
 
-            Đọc tiếp
+        <!-- SLIDE 4 -->
 
-        </button>
+        <div class="memory-slide">
+
+            <div class="memory-box">
+
+                <h1 class="memory-title">
+                    Một vài mảnh kỉ niệm mà ### còn lưu lại
+                </h1>
+
+                <div class="memory-content center-text">
+
+                    <p>
+                        Sau tất cả những chuyện đã xảy ra,
+                        ### vẫn còn giữ lại một vài thứ.
+                    </p>
+
+                    <p>
+                        Có thể không còn nhiều,
+                        nhưng mỗi thứ còn lại đều mang theo
+                        một phần ký ức của chúng ta.
+                    </p>
+
+                    <p>
+                        Nếu #### muốn xem lại,
+                        ### để chúng ở đây.
+                    </p>
+
+                    <a
+                        class="drive-button"
+                        id="driveLink"
+                        href="https://drive.google.com/drive/folders/1vq2OgxAapjXE1hrC9I1rPDIgQulqy_gf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        💌 Mở kỉ niệm cũ
+                    </a>
+
+                </div>
+
+                <button
+                    class="btn"
+                    id="memoryFinish">
+                    Đọc tiếp
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEMORY NAV -->
+
+        <div class="memory-nav">
+
+            <span class="memory-dot active"></span>
+            <span class="memory-dot"></span>
+            <span class="memory-dot"></span>
+            <span class="memory-dot"></span>
+
+        </div>
 
     </div>
 
-</div>
+    <!-- NÚT NHẬT KÝ -->
 
-
-<!-- =========================================================
-NÚT NHẬT KÝ
-========================================================= -->
-
-<button
-    class="diary-open-button"
-    id="openDiary">
-
-    📖 Nhật Ký
-
-</button>
-
-
-<!-- MEMORY NAV -->
-
-<div class="memory-nav">
-
-    <span class="memory-dot active"></span>
-    <span class="memory-dot"></span>
-    <span class="memory-dot"></span>
-    <span class="memory-dot"></span>
-
-</div>
-
-</div>
+    <button
+        class="diary-open-button"
+        id="openDiary">
+        📖 Nhật Ký
+    </button>
 
 </section>
 
@@ -3140,45 +2500,41 @@ TRANG LỰA CHỌN
 
 <section class="screen" id="choicePage">
 
-<div class="glass-box choice-box">
+    <div class="glass-box choice-box">
 
-<h1 class="title">
-    Cảm ơn ############# đã đọc đến đây
-</h1>
+        <h1 class="title">
+            Cảm ơn #### đã đọc đến đây
+        </h1>
 
-<p class="text center-text">
+        <p class="text center-text">
 
-    Có lẽ ############# đã đoán được, đây là lời cuối cũng
-    như câu hỏi cuối ### muốn hỏi #############.
+            Có lẽ #### đã đoán được, đây là lời cuối cũng
+            như câu hỏi cuối ### muốn hỏi ####.
 
-    <br><br>
+            <br><br>
 
-    sự lựa chọn đọc tiếp hay không thì tùy vào
-    sự lựa chọn của #############.
+            sự lựa chọn đọc tiếp hay không thì tùy vào
+            sự lựa chọn của ####.
 
-</p>
+        </p>
 
-<div class="choice-buttons">
+        <div class="choice-buttons">
 
-    <button
-        class="btn"
-        id="considerBtn">
+            <button
+                class="btn"
+                id="considerBtn">
+                #### muốn xem xét lời đề nghị của ###
+            </button>
 
-        ############# muốn xem xét lời đề nghị của ###
+            <button
+                class="btn"
+                id="friendBtn">
+                #### chỉ coi ### là bạn
+            </button>
 
-    </button>
+        </div>
 
-    <button
-        class="btn"
-        id="friendBtn">
-
-        ############# chỉ coi ### là bạn
-
-    </button>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
@@ -3189,47 +2545,43 @@ TRANG ĐỀ NGHỊ
 
 <section class="screen" id="proposalPage">
 
-<div class="glass-box">
+    <div class="glass-box">
 
-<h1 class="title">
-    Một lời cuối cùng
-</h1>
+        <h1 class="title">
+            Một lời cuối cùng
+        </h1>
 
-<p class="text center-text">
+        <p class="text center-text">
 
-    nếu ############# đi đến đây thì ### cũng gần như không còn
-    gì quá nhiều để nói với #############
+            nếu #### đi đến đây thì ### cũng gần như không còn
+            gì quá nhiều để nói với ####
 
-    <br><br>
+            <br><br>
 
-    ############# đồng ý làm bạn gái ### nhé? ### tuy mắc nhiều
-    sai lầm trong quá khứ và cũng có 1 khoảng thời gian
-    ấu trĩ nhưng ### hứa sẽ vun vén và bù đắp cho #############
-    bằng tất cả những gì ### có thể!
+            #### đồng ý làm bạn gái ### nhé? ### tuy mắc nhiều
+            sai lầm trong quá khứ và cũng có 1 khoảng thời gian
+            ấu trĩ nhưng ### hứa sẽ vun vén và bù đắp cho ####
+            bằng tất cả những gì ### có thể!
 
-</p>
+        </p>
 
-<div class="choice-buttons">
+        <div class="choice-buttons">
 
-    <button
-        class="btn"
-        id="yesBtn">
+            <button
+                class="btn"
+                id="yesBtn">
+                dạ, #### đồng ý
+            </button>
 
-        dạ, ############# đồng ý
+            <button
+                class="btn"
+                id="notReadyBtn">
+                #### nghĩ mình chưa sẵn sàng cho 1 mối quan hệ mới
+            </button>
 
-    </button>
+        </div>
 
-    <button
-        class="btn"
-        id="notReadyBtn">
-
-        ############# nghĩ mình chưa sẵn sàng cho 1 mối quan hệ mới
-
-    </button>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
@@ -3240,43 +2592,30 @@ TRANG ĐỒNG Ý
 
 <section class="screen" id="successPage">
 
-<div class="glass-box">
+    <div class="glass-box">
 
-<div class="success-heart">
-    ❤️
-</div>
+        <div class="success-heart">
+            ❤️
+        </div>
 
-<h1 class="success-title">
-    YAYY, ### yêu #############!
-</h1>
+        <h1 class="success-title">
+            YAYY, ### yêu ####!
+        </h1>
 
-<p class="success-text">
+        <p class="success-text">
+            ### yêu #### nhiều lắm!
+            <br>
+            cảm ơn #### đã cho ### 1 cơ hộii
+        </p>
 
-    ### yêu ############# nhiều lắm!
+        <p class="number-note">
+            nhắn cho ###
+            <span class="red">ali33</span>
+            nhé
+            <span class="red">hihi</span>
+        </p>
 
-    <br>
-
-    cảm ơn ############# đã cho ### 1 cơ hội
-
-</p>
-
-<p class="number-note">
-
-    nhắn cho ###
-
-    <span class="red">
-        ali33
-    </span>
-
-    nhé
-
-    <span class="red">
-        hihi
-    </span>
-
-</p>
-
-</div>
+    </div>
 
 </section>
 
@@ -3287,41 +2626,35 @@ TRANG CHƯA SẴN SÀNG
 
 <section class="screen" id="notReadyPage">
 
-<div class="glass-box">
+    <div class="glass-box">
 
-<h1 class="title">
-    ### hiểu mà
-</h1>
+        <h1 class="title">
+            ### hiểu mà
+        </h1>
 
-<p class="final-message">
+        <p class="final-message">
 
-    ### cũng thông cảm bởi những gì mà ############# đã trải qua
-    cũng như ### cũng có lẽ cũng ngờ ngợ từ trước vì #############
-    có bảo bây giờ ############# không muốn yêu xa và 1 bài repost
-    gì đó "me when i see the reason i came to school"
-    và vài thứ linh tinh khác ((((=
+            ### cũng thông cảm bởi những gì mà #### đã trải qua
+            cũng như ### cũng có lẽ cũng ngờ ngợ từ trước vì ####
+            có bảo bây giờ #### không muốn yêu xa và 1 bài repost
+            gì đó "me when i see the reason i came to school"
+            và vài thứ linh tinh khác ((((=
 
-    <br><br>
+            <br><br>
 
-    dẫu sao cũng cảm ơn thời gian qua đã cho ### có được
-    ảo tưởng như vậy, thật ra ### cũng không ghét nó lắm,
-    khá vui khá niche
+            dẫu sao cũng cảm ơn thời gian qua đã cho ### có được
+            ảo tưởng như vậy, thật ra ### cũng không ghét nó lắm,
+            khá vui khá niche
 
-</p>
+        </p>
 
-<p class="number-note">
+        <p class="number-note">
+            cứ nhắn
+            <span class="red">ali</span>
+            lại với ### là được
+        </p>
 
-    cứ nhắn
-
-    <span class="red">
-        ali
-    </span>
-
-    lại với ### là được
-
-</p>
-
-</div>
+    </div>
 
 </section>
 
@@ -3332,524 +2665,630 @@ TRANG BẠN
 
 <section class="screen" id="friendPage">
 
-<div class="glass-box">
+    <div class="glass-box">
 
-<h1 class="title">
-    ### hiểu rồi
-</h1>
+        <h1 class="title">
+            ### hiểu rồi
+        </h1>
 
-<p class="final-message">
+        <p class="final-message">
 
-    cảm ơn ############# vì đã nói thật với ###.
+            cảm ơn #### vì đã nói thật với ###.
 
-    <br><br>
+            <br><br>
 
-    ### vẫn trân trọng khoảng thời gian chúng ta
-    đã có với nhau và ### cũng không muốn vì chuyện
-    này mà mọi thứ trở nên khó xử.
+            ### vẫn trân trọng khoảng thời gian chúng ta
+            đã có với nhau và ### cũng không muốn vì chuyện
+            này mà mọi thứ trở nên khó xử.
 
-    <br><br>
+            <br><br>
 
-    nếu ############# chỉ coi ### là bạn thì ### tôn trọng
-    điều đó.
+            nếu #### chỉ coi ### là bạn thì ### tôn trọng
+            điều đó.
 
-    <br><br>
+            <br><br>
 
-    dù sao thì ### vẫn vui vì chúng ta đã từng có
-    những khoảng thời gian rất đáng nhớ với nhau.
+            dù sao thì ### vẫn vui vì chúng ta đã từng có
+            những khoảng thời gian rất đáng nhớ với nhau.
 
-</p>
+        </p>
 
-<p class="number-note">
+        <p class="number-note">
 
-    nhắn
+            nhắn
+            <span class="red">hihi</span>
+            cho ### nhé
 
-    <span class="red">
-        hihi
-    </span>
+        </p>
 
-    cho ### nhé
-
-</p>
-
-</div>
+    </div>
 
 </section>
 
 
 <!-- =========================================================
-NHẬT KÝ OVERLAY
+NHẬT KÝ
 ========================================================= -->
 
 <div id="diaryOverlay">
-<div class="diary-night-sky" aria-hidden="true"><div class="diary-moon"></div><div class="diary-stars" id="diaryStars"></div></div>
-<div class="diary-book" id="diaryBook">
-<div class="diary-cover" id="diaryCover">
-<div class="cover-decoration"></div>
-<div class="cover-symbol">☾</div>
-<div class="cover-title">Nhật ký</div>
-<div class="cover-open-hint">Chạm vào bìa để mở • Vuốt sang trái để lật trang</div>
-</div>
-<div class="diary-inside">
-<div class="book-spine"></div>
-<div class="diary-page diary-page-content" data-page="0">
-<div class="diary-content">
-<span class="diary-date"></span>
-<h1 class="diary-heading">Lời nói đầu</h1><div class="diary-text"><p>Xin chào,tôi tên là Hà Quốc Anh.Tôi tạo ra cuốn
-                        nhật ký này để ghi chép lại những ngày tháng
-                        thường nhật của tôi,ờm có lẽ bạn sẽ thắc mắc rằng
-                        tại sao tôi không mua 1 quyển vở hoặc tạo 1 trang
-                        file word riêng mà phải để ở trong 1 trang web
-                        tỏ tình (đã thất bại) như này....</p></div>
-</div>
-<span class="diary-page-number">1</span>
-</div>
-<div class="diary-page diary-page-content" data-page="1">
-<div class="diary-content">
-<span class="diary-date"></span>
-<div class="diary-text"><p>Yeah!,tôi là 1 performative boy muốn sự chú ý
-                        nhưng hơi hơi hèn nên làm trong âm thầm,tôi không
-                        biết bạn là ai,dù bạn là #### hay 1 người bất kì
-                        thì ờm....hãy đọc cuốn nhật ký này với tâm thế
-                        để giải trí nhé! tôi không quan tâm lắm đâu.</p></div>
-</div>
-<span class="diary-page-number">2</span>
-</div>
-<div class="diary-page diary-page-content" data-page="2">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>Sau khi nhận được 1 lời từ chối
-                        &quot;có thể dự đoán trước được&quot; vào lúc khoảng 4:40
-                        và đọc lúc 10:00,tôi bình thản như thể đó la
-                        1 kết quả tôi đã dự đoán từ trước,nhưng thời gian
-                        mới là kẻ thù thực sự,chỉ sau khoảng vài giây
-                        bình tĩnh đến kì lạ thì tim tôi bắt đầu đập nhanh
-                        hơn ánh mắt vô hồn nhìn vào khoảng không vô định,
-                        tôi bắt đầu lo lắng,hoang mang và sợ hãi.Tôi sợ
-                       </p><p> gì nhỉ?</p></div>
-</div>
-<span class="diary-page-number">3</span>
-</div>
-<div class="diary-page diary-page-content" data-page="3">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>tôi sợ bị bỏ rơi? Sợ mất đi người mình
-                        thực sự thích bấy lâu? Bản thân tôi cũng không
-                        biết nữa.</p><p>tôi bắt đầu đọc từng câu từng chữ mà #### đã
-                        để lại,dù là 1 lời từ chối nhưng có lẽ cô ấy
-                        không phải kiểu người phũ phàng và thay vào đó
-                        là sự ân cần và 1 lời giải thích đau lòng nhưng
-                        chân thật.Tim tôi lúc này quặn lại và nhói lên
-                        nhưng đồng thời cũng dịu lại ngay sau đó.</p></div>
-</div>
-<span class="diary-page-number">4</span>
-</div>
-<div class="diary-page diary-page-content" data-page="4">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>Tôi cũng không biết nữa,có lẽ vì đó là sự từ
-                        chối nhẹ nhàng và vẫn cho tôi cảm giác được
-                        quan tâm (Um tui từng bị cùng 1 người từ chối
-                        đến 4 lần trong 1 năm hồi lớp 8 nên đừng thắc mắc)</p><p>vì thế mà lòng tôi phần nào đó cảm thấy nhẹ
-                        nhàng hơn.</p></div>
-</div>
-<span class="diary-page-number">5</span>
-</div>
-<div class="diary-page diary-page-content" data-page="5">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>sau đó tôi với #### có nói chuyện thêm vài câu
-                        trước khi coi nhau như bạn bè xã giao</p></div>
-</div>
-<span class="diary-page-number">6</span>
-</div>
-<div class="diary-page diary-page-content" data-page="6">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>trong 1 thoáng tôi nhận ra dù trước đấy đã yêu
-                        cô ấy rất nhiều và cũng nhiều sự kiện trôi qua
-                        nhưng hình như tôi vẫn quá hà tiện và chưa thực
-                        sự có món quà nào tử tế dành cho 1 người xứng
-                        đáng với mọi điều tốt đẹp trên đời như vậy,tôi
-                        thì chỉ có địa chỉ nhà cô ấy và số điện thoại
-                        &quot;bà???&quot; của cô ấy nên tôi sẽ tặng cô ấy 1 món
-                        quà cuối coi như lời chia tay trước khi tôi move
-                </p></div>
-</div>
-<span class="diary-page-number">7</span>
-</div>
-<div class="diary-page diary-page-content" data-page="7">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>        on khỏi xiềng xích tình yêu,thứ đã trói buộc
-                        tôi lại dù đã chia tay khá lâu trước đây và
-                        quay ra làm bạn,tôi đã cố tình không rep lại
-                        video cô ấy share trên tiktok để streak có thể
-                        mất.</p><p>ờm nếu bạn tò mò thì tôi tặng cô ấy 1 lọ cushion
-                        màu tự nhiên giá gốc 600k sau khi áp mã còn hơn
-                        200k ((((=</p></div>
-</div>
-<span class="diary-page-number">8</span>
-</div>
-<div class="diary-page diary-page-content" data-page="8">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>ờm tại sao lại là màu tự nhiên mà không phải
-                        trắng sáng mặc dù tôi còn chưa từng 1 lần nhìn
-                        thấy lọ mỹ phẩm của cô ấy bao giờ,son cô ấy
-                        dùng loại gì?</p></div>
-</div>
-<span class="diary-page-number">9</span>
-</div>
-<div class="diary-page diary-page-content" data-page="9">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>Thì,,,,tôi có lẽ là 1 con simp chính hiệu,tôi
-                        nghiện mọi thứ thuần khiết thuộc về cô ấy,bức
-                        ảnh của cô ấy mà tôi thích nhất không phải là
-                        1 bức với bộ váy lộng lẫy hay chụp hình phong
-                        cách street với chiếc mũ đội ngược hình cờ Mỹ
-                        khá phong cách,hay là hình ảnh cô ấy đeo khuyên
-                        giả đầy cá tính.</p></div>
-</div>
-<span class="diary-page-number">10</span>
-</div>
-<div class="diary-page diary-page-content" data-page="10">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>Mà chỉ đơn giản là 1 bức ảnh cô ấy nhẹ nhàng
-                        lè chiếc lưỡi của mình ra,không phấn son,không
-                        filter,không phụ kiện.Chỉ là 1 bức ảnh cô ấy
-                        lè lưỡi.</p><p>đối với tôi,bức ảnh ấy như 1 đức tin bởi sự
-                        đáng yêu,tự nhiên và sự thoải mái khi bên cạnh
-                        người mình yêu.</p><p>Thật sự thì khi viết dòng này tôi vẫn thi
-                        thoảng đá ra ngắm bức ảnh ấy,có lẽ move on
-                        không dễ như tôi tưởng....</p></div>
-</div>
-<span class="diary-page-number">11</span>
-</div>
-<div class="diary-page diary-page-content" data-page="11">
-<div class="diary-content">
-<span class="diary-date">9/9/2026</span>
-<div class="diary-text"><p>(Nếu bạn tò mò thì bức ảnh đó có trong phần
-                        kỉ niệm,là bức ảnh cuối của video với nền nhạc
-                        đào nương remix)</p></div>
-</div>
-<span class="diary-page-number">12</span>
-</div>
-<div class="diary-page diary-page-content" data-page="12">
-<div class="day-start">
-<span class="diary-date">10/9/2026</span>
-<div class="day-start-line"></div>
-<div class="day-start-text">
-                    Một ngày mới bắt đầu.
-                    <br/>
-                    Và có lẽ việc move on vẫn chưa dễ dàng như tôi nghĩ.
+
+    <div class="diary-night"></div>
+
+    <button
+        class="diary-close"
+        id="closeDiary"
+        aria-label="Đóng nhật ký">
+        ×
+    </button>
+
+    <div class="diary-book" id="diaryBook">
+
+        <!-- =================================================
+        BÌA
+        ================================================= -->
+
+        <div
+            class="diary-cover"
+            id="diaryCover">
+
+            <div class="cover-decoration">
+
+                <div class="cover-title">
+                    Nhật ký đến khi move on
                 </div>
-</div>
-<span class="diary-page-number">13</span>
-</div>
-<div class="diary-page diary-page-content" data-page="13">
-<div class="diary-content">
-<span class="diary-date">10/9/2026</span>
-<div class="diary-text"><p>vẫn là 1 buổi sáng mệt mỏi mọi ngày,tôi như thói
-                        quen liền cầm chiếc điện thoại của tôi lên và
-                        check tin nhắn xem cô ấy có gửi video gì thối
-                        não cho tôi xem không,nói thật dù nội dung khá
-                        xàm nhưng tôi thích cái cách mà cô ấy lựa từng
-                        video và chọn ra cái cô ấy cho là phù hợp để gửi
-                        cho tôi.</p><p>Ồ,không có video thôi não nào được share cả,kể
-                        cả 1 lời chào như mọi khi &quot;Helu mới dậy&quot; hay
-                        đại loại thế.</p></div>
-</div>
-<span class="diary-page-number">14</span>
-</div>
-<div class="diary-page diary-page-content" data-page="14">
-<div class="diary-content">
-<span class="diary-date">10/9/2026</span>
-<div class="diary-text"><p>Tôi thực sự đã buồn cười đến phát khóc trong khi
-                        cảm ngấm sự im lặng chết chóc đó.</p><p>mọi thứ vẫn diễn ra bình thường thì đến món quà
-                        của tôi đến tay cô ấy,công nhận là gần trong tâm
-                        tài chính của đất nước sướng nhật,cô ấy có nhắn
-                        tin lại cho tôi bla blo gì đó và tôi cũng nhắn
-                        lại bla blo rồi kết thúc bằng 1 câu cô ấy nói
-                        tôi lạnh lùng và như thể tôi đang giận,lòng tôi
-                        như thắt lại,tim tôi khi ấy có lẽ đã dừng lại
-                        1 nhịp.</p></div>
-</div>
-<span class="diary-page-number">15</span>
-</div>
-<div class="diary-page diary-page-content" data-page="15">
-<div class="diary-content">
-<span class="diary-date">10/9/2026</span>
-<div class="diary-text"><p>tôi thật sự cũng muốn trò chuyện với cô ấy như
-                        cái cách mà tôi đã từng,cái cách mà tôi nghĩ
-                        là cô ấy cảm thấy thoải mái khi nói chuyện,cái
-                        cách mà bản thân tôi cũng thấy thoải mái bộc
-                        lộ cảm xúc khi nói chuyện,cái cách mà có lẽ
-                        tôi như thể bộc lộ con người trần trụi và chân
-                        thật của bản thân,nhưng tôi đã ra một quyết định
-                        có lẽ là cô ấy thấy thoải mái hơn đó là chấm
-                       </p><p> dứt cuộc trò chuyện.</p></div>
-</div>
-<span class="diary-page-number">16</span>
-</div>
-<div class="diary-page diary-page-content" data-page="16">
-<div class="diary-content">
-<span class="diary-date">10/9/2026</span>
-<div class="diary-text"><p>đến chiều tối khi đang vật lộn với đống tạ
-                        trong phòng gym thì điện thoại tôi réo 1 tiếng
-                        thông báo,một cái tiếng rất riêng mà chỉ có
-                        tiktok có,tôi tưởng là ai đó nhắn,tôi mở ra xem
-                        thì đó là #### share cho tôi 1 video chết não,
-                        tôi bối rồi và tràn ngập trong sự thắc mắc và
-                        đi đến kết luận là cô ấy muốn giữ streak với
-                        mình nên tôi cũng tìm bừa 1 sticker để giữ như
-                        m</p><p>ong muốn của cô ấy.</p></div>
-</div>
-<span class="diary-page-number">17</span>
-</div>
-<div class="diary-page diary-page-content" data-page="17">
-<div class="diary-content">
-<span class="diary-date">10/9/2026</span>
-<div class="diary-text"><p>có lẽ buổi tối là khoảng thời gian khó khăn
-                        nhất của tôi,tôi lại chứng nào tật nấy,tôi lại
-                        tràn ngập trong nhớ thương,tiếc nuối.</p><p>Tôi lại mở laptop lên lúc 11:30 và tiếp tục
-                        ngắm ảnh cô ấy như 1 kẻ biến thái theo dõi
-                        con mồi.</p></div>
-</div>
-<span class="diary-page-number">18</span>
-</div>
-<div class="diary-page diary-page-content" data-page="18">
-<div class="day-start">
-<span class="diary-date">10/9/2026</span>
-<div class="day-start-line"></div>
-<div class="day-start-text">
-                    hôm nay có lẽ là ngày bình thường nhất.
+
+            </div>
+
+            <div class="cover-subtitle">
+                PRIVATE JOURNAL
+            </div>
+
+            <div class="open-book-hint">
+                chạm vào quyển sách để mở
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+        PHẦN RUỘT SÁCH
+        ================================================= -->
+
+        <div class="diary-pages">
+
+            <!-- =============================================
+            TRANG LỜI NÓI ĐẦU
+            ============================================= -->
+
+            <article class="diary-page left">
+
+                <div class="diary-page-content">
+
+                    <h2>
+                        Lời nói đầu
+                    </h2>
+
+                    <div class="diary-text">
+
+                        <p>
+                            Xin chào,tôi tên là Hà Quốc Anh.
+                            Tôi tạo ra cuốn nhật ký này để ghi chép
+                            lại những ngày tháng thường nhật của tôi,
+                            ờm có lẽ bạn sẽ thắc mắc rằng tại sao tôi
+                            không mua 1 quyển vở hoặc tạo 1 trang file
+                            word riêng mà phải để ở trong 1 trang web
+                            tỏ tình (đã thất bại) như này....
+                        </p>
+
+                        <p>
+                            Yeah!,tôi là 1 performative boy muốn sự
+                            chú ý nhưng hơi hơi hèn nên làm trong âm
+                            thầm,tôi không biết bạn là ai,dù bạn là
+                            #### hay 1 người bất kì thì ờm....
+                            hãy đọc cuốn nhật ký này với tâm thế để
+                            giải trí nhé! tôi không quan tâm lắm đâu.
+                        </p>
+
+                    </div>
+
+                    <div class="diary-note">
+                        lướt sang trái để sang trang
+                    </div>
+
                 </div>
-</div>
-<span class="diary-page-number">19</span>
-</div>
-<div class="diary-page diary-page-content" data-page="19">
-<div class="diary-content">
-<span class="diary-date">10/9/2026</span>
-<div class="diary-text"><p>hôm nay có lẽ là ngày bình thường nhất,tôi dường
-                        như không để ý đến cô ấy nhiều nữa,soi tcn trên
-                        các nền tảng và cố ngẫm xem bài hát cô ấy đăng
-                        lên note có ý nghĩa gì(hôm ấy là ngày đầu tiên
-                        tôi không thấy cô ấy đăng gì)</p><p>đến giờ chiều cô ấy share thêm cho tôi 1 video
-                        giữ chuỗi như hôm qua,không có gì đặc sắc.</p><p>Đến tối tôi có được bạn Vy,người mà hồi trước
-                        #### hiểu lầm tôi với cô ấy tạo tiền để cho
-                        cuộc chia tay,rủ chơi game.</p></div>
-</div>
-<span class="diary-page-number">20</span>
-</div>
-<div class="diary-page diary-page-content" data-page="20">
-<div class="diary-content">
-<span class="diary-date">10/9/2026</span>
-<div class="diary-text"><p>tôi được tham gia 1 server discord tạo bởi bạn
-                        ấy và những người bạn,tối đó khá vui khi mọi
-                        người chơi game và trò chuyện vui vẻ cùng nhau
-                        nhưng tôi đã xin nghỉ sớm vì cơn đau đầu do
-                        biến đổi thời tiết,có lẽ tôi nên mặc nhiều áo
-                        hơn khi ra đường.</p></div>
-</div>
-<span class="diary-page-number">21</span>
-</div>
-<div class="diary-page diary-page-content" data-page="21">
-<div class="diary-content">
-<span class="diary-date">10/9/2026</span>
-<div class="diary-text"><p>lúc tôi đang viết dòng này là 1h34 của ngày
-                        12/9/2026.</p><p>ờm,có lẽ việc move vẫn khó hơn tôi nghĩ(((=</p><p>tôi nhớ cô ấy quá......</p></div>
-</div>
-<span class="diary-page-number">22</span>
-</div>
-<div class="diary-page diary-page-content" data-page="22">
-<div class="day-start">
-<span class="diary-date">12/9/2026</span>
-<div class="day-start-line"></div>
-<div class="day-start-text">
-                    Ngày thứ 4 kể từ hôm ấy.
-                    <br/>
-                    Hôm nay mọi việc khá bình thường.
+
+            </article>
+
+
+            <!-- =============================================
+            TRANG 9/9/2026
+            ============================================= -->
+
+            <article class="diary-page right">
+
+                <div class="diary-page-content">
+
+                    <div class="diary-date">
+                        9/9/2026
+                    </div>
+
+                    <div class="diary-text">
+
+                        <p>
+                            Sau khi nhận được 1 lời từ chối
+                            "có thể dự đoán trước được" vào lúc
+                            khoảng 4:40 và đọc lúc 10:00,tôi bình
+                            thản như thể đó là 1 kết quả tôi đã
+                            dự đoán từ trước.
+                        </p>
+
+                        <p>
+                            Nhưng thời gian mới là kẻ thù thực sự,
+                            chỉ sau khoảng vài giây bình tĩnh đến
+                            kì lạ thì tim tôi bắt đầu đập nhanh hơn,
+                            ánh mắt vô hồn nhìn vào khoảng không
+                            vô định,tôi bắt đầu lo lắng,hoang mang
+                            và sợ hãi.
+                        </p>
+
+                        <p>
+                            Tôi sợ gì nhỉ? Tôi sợ bị bỏ rơi?
+                            Sợ mất đi người mình thực sự thích
+                            bấy lâu? Bản thân tôi cũng không biết nữa.
+                        </p>
+
+                        <p>
+                            Tôi bắt đầu đọc từng câu từng chữ mà
+                            #### đã để lại,dù là 1 lời từ chối nhưng
+                            có lẽ #### không phải kiểu người phũ phàng
+                            và thay vào đó là sự ân cần và 1 lời giải
+                            thích đau lòng nhưng chân thật.
+                        </p>
+
+                        <p>
+                            Tim tôi lúc này quặn lại và nhói lên
+                            nhưng đồng thời cũng dịu lại ngay sau đó.
+                        </p>
+
+                        <p>
+                            Tôi cũng không biết nữa,có lẽ vì đó là
+                            sự từ chối nhẹ nhàng và vẫn cho tôi cảm
+                            giác được quan tâm.
+                        </p>
+
+                        <p>
+                            (Um tui từng bị cùng 1 người từ chối đến
+                            4 lần trong 1 năm hồi lớp 8 nên đừng
+                            thắc mắc)
+                        </p>
+
+                        <p>
+                            Vì thế mà lòng tôi phần nào đó cảm thấy
+                            nhẹ nhàng hơn.
+                        </p>
+
+                    </div>
+
                 </div>
+
+            </article>
+
+
+            <!-- =============================================
+            TRANG 9/9 TIẾP
+            ============================================= -->
+
+            <article class="diary-page left hidden">
+
+                <div class="diary-page-content">
+
+                    <div class="diary-date">
+                        9/9/2026
+                    </div>
+
+                    <div class="diary-text">
+
+                        <p>
+                            Sau đó tôi với #### có nói chuyện thêm
+                            vài câu trước khi coi nhau như bạn bè
+                            xã giao.
+                        </p>
+
+                        <p>
+                            Trong 1 thoáng tôi nhận ra dù trước đấy
+                            đã yêu cô ấy rất nhiều và cũng nhiều sự
+                            kiện trôi qua nhưng hình như tôi vẫn quá
+                            hà tiện và chưa thực sự có món quà nào
+                            tử tế dành cho 1 người xứng đáng với mọi
+                            điều tốt đẹp trên đời như vậy.
+                        </p>
+
+                        <p>
+                            Tôi thì chỉ có địa chỉ nhà cô ấy và số
+                            điện thoại "bà???" của cô ấy nên tôi sẽ
+                            tặng cô ấy 1 món quà cuối coi như lời
+                            chia tay trước khi tôi move on khỏi
+                            xiềng xích tình yêu,thứ đã trói buộc tôi
+                            lại dù đã chia tay khá lâu trước đây và
+                            quay ra làm bạn.
+                        </p>
+
+                        <p>
+                            Tôi đã cố tình không rep lại video cô ấy
+                            share trên tiktok để streak có thể mất.
+                        </p>
+
+                        <p>
+                            Ờm nếu bạn tò mò thì tôi tặng cô ấy 1 lọ
+                            cushion màu tự nhiên giá gốc 600k sau khi
+                            áp mã còn hơn 200k ((((=
+                        </p>
+
+                        <p>
+                            Ờm tại sao lại là màu tự nhiên mà không
+                            phải trắng sáng mặc dù tôi còn chưa từng
+                            1 lần nhìn thấy lọ mỹ phẩm của cô ấy bao
+                            giờ,son cô ấy dùng loại gì?
+                        </p>
+
+                        <p>
+                            Thì,,,,tôi có lẽ là 1 con simp chính hiệu,
+                            tôi nghiện mọi thứ thuần khiết thuộc về
+                            cô ấy.
+                        </p>
+
+                        <p>
+                            Bức ảnh của cô ấy mà tôi thích nhất không
+                            phải là 1 bức với bộ váy lộng lẫy hay
+                            chụp hình phong cách street với chiếc
+                            mũ đội ngược hình cờ Mỹ khá phong cách,
+                            hay là hình ảnh cô ấy đeo khuyên giả đầy
+                            cá tính.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =============================================
+            TRANG 9/9 TIẾP 2
+            ============================================= -->
+
+            <article class="diary-page right hidden">
+
+                <div class="diary-page-content">
+
+                    <div class="diary-date">
+                        9/9/2026
+                    </div>
+
+                    <div class="diary-text">
+
+                        <p>
+                            Mà chỉ đơn giản là 1 bức ảnh cô ấy nhẹ
+                            nhàng lè chiếc lưỡi của mình ra,không
+                            phấn son,không filter,không phụ kiện.
+                            Chỉ là 1 bức ảnh cô ấy lè lưỡi.
+                        </p>
+
+                        <p>
+                            Đối với tôi,bức ảnh ấy như 1 đức tin bởi
+                            sự đáng yêu,tự nhiên và sự thoải mái khi
+                            bên cạnh người mình yêu.
+                        </p>
+
+                        <p>
+                            Thật sự thì khi viết dòng này tôi vẫn
+                            thi thoảng lôi ra ngắm bức ảnh ấy,có lẽ
+                            move on không dễ như tôi tưởng....
+                        </p>
+
+                        <p>
+                            (Nếu bạn tò mò thì bức ảnh đó có trong
+                            phần kỉ niệm,là bức ảnh cuối của video
+                            với nền nhạc đào nương remix)
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =============================================
+            TRANG 10/9
+            ============================================= -->
+
+            <article class="diary-page left hidden">
+
+                <div class="diary-page-content">
+
+                    <div class="diary-date">
+                        10/9/2026
+                    </div>
+
+                    <div class="diary-text">
+
+                        <p>
+                            Vẫn là 1 buổi sáng mệt mỏi mọi ngày,
+                            tôi như thói quen liền cầm chiếc điện
+                            thoại của tôi lên và check tin nhắn xem
+                            cô ấy có gửi video gì thối não cho tôi
+                            xem không.
+                        </p>
+
+                        <p>
+                            Nói thật dù nội dung khá xàm nhưng tôi
+                            thích cái cách mà cô ấy lựa từng video
+                            và chọn ra cái cô ấy cho là phù hợp để
+                            gửi cho tôi.
+                        </p>
+
+                        <p>
+                            Ồ,không có video thôi não nào được share
+                            cả,kể cả 1 lời chào như mọi khi
+                            "Helu mới dậy" hay đại loại thế.
+                        </p>
+
+                        <p>
+                            Tôi thực sự đã buồn cười đến phát khóc
+                            trong khi cảm ngấm sự im lặng chết chóc
+                            đó.
+                        </p>
+
+                        <p>
+                            Mọi thứ vẫn diễn ra bình thường thì đến
+                            món quà của tôi đến tay cô ấy,công nhận
+                            là gần trong tâm tài chính của đất nước
+                            sướng nhất,cô ấy có nhắn tin lại cho tôi
+                            bla blo gì đó và tôi cũng nhắn lại bla
+                            blo rồi kết thúc bằng 1 câu cô ấy nói
+                            tôi lạnh lùng và như thể tôi đang giận.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =============================================
+            TRANG 10/9 TIẾP
+            ============================================= -->
+
+            <article class="diary-page right hidden">
+
+                <div class="diary-page-content">
+
+                    <div class="diary-date">
+                        10/9/2026
+                    </div>
+
+                    <div class="diary-text">
+
+                        <p>
+                            Lòng tôi như thắt lại,tim tôi khi ấy có
+                            lẽ đã dừng lại 1 nhịp.
+                        </p>
+
+                        <p>
+                            Tôi thật sự cũng muốn trò chuyện với cô
+                            ấy như cái cách mà tôi đã từng,cái cách
+                            mà tôi nghĩ là cô ấy cảm thấy thoải mái
+                            khi nói chuyện,cái cách mà bản thân tôi
+                            cũng thấy thoải mái bộc lộ cảm xúc khi
+                            nói chuyện.
+                        </p>
+
+                        <p>
+                            Cái cách mà có lẽ tôi như thể bộc lộ
+                            con người trần trụi và chân thật của bản
+                            thân.
+                        </p>
+
+                        <p>
+                            Nhưng tôi đã ra một quyết định có lẽ là
+                            cô ấy thấy thoải mái hơn đó là chấm dứt
+                            cuộc trò chuyện.
+                        </p>
+
+                        <p>
+                            Đến chiều tối khi đang vật lộn với đống
+                            tạ trong phòng gym thì điện thoại tôi
+                            réo 1 tiếng thông báo,một cái tiếng rất
+                            riêng mà chỉ có tiktok có.
+                        </p>
+
+                        <p>
+                            Tôi tưởng là ai đó nhắn,tôi mở ra xem
+                            thì đó là #### share cho tôi 1 video
+                            chết não.
+                        </p>
+
+                        <p>
+                            Tôi bối rối và tràn ngập trong sự thắc
+                            mắc và đi đến kết luận là cô ấy muốn
+                            giữ streak với mình nên tôi cũng tìm
+                            bừa 1 sticker để giữ như mong muốn của
+                            cô ấy.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =============================================
+            TRANG 10/9 CUỐI
+            ============================================= -->
+
+            <article class="diary-page left hidden">
+
+                <div class="diary-page-content">
+
+                    <div class="diary-date">
+                        10/9/2026
+                    </div>
+
+                    <div class="diary-text">
+
+                        <p>
+                            Có lẽ buổi tối là khoảng thời gian khó
+                            khăn nhất của tôi,tôi lại chứng nào tật
+                            nấy,tôi lại tràn ngập trong nhớ thương,
+                            tiếc nuối.
+                        </p>
+
+                        <p>
+                            Tôi lại mở laptop lên lúc 11:30 và tiếp
+                            tục ngắm ảnh cô ấy như 1 kẻ biến thái
+                            theo dõi con mồi.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =============================================
+            NGÀY 11/9
+            ============================================= -->
+
+            <article class="diary-page right hidden">
+
+                <div class="diary-page-content">
+
+                    <div class="diary-date">
+                        11/9/2026
+                    </div>
+
+                    <div class="diary-text">
+
+                        <p>
+                            Hôm nay có lẽ là ngày bình thường nhất,
+                            tôi dường như không để ý đến cô ấy
+                            nhiều nữa,soi tcn trên các nền tảng và
+                            cố ngẫm xem bài hát cô ấy đăng lên note
+                            có ý nghĩa gì.
+                        </p>
+
+                        <p>
+                            Hôm ấy là ngày đầu tiên tôi không thấy
+                            cô ấy đăng gì.
+                        </p>
+
+                        <p>
+                            Đến giờ chiều cô ấy share thêm cho tôi
+                            1 video giữ chuỗi như hôm qua,không có
+                            gì đặc sắc.
+                        </p>
+
+                        <p>
+                            Đến tối tôi có được bạn Vy,người mà hồi
+                            trước #### hiểu lầm tôi với cô ấy tạo
+                            tiền đề cho cuộc chia tay,rủ chơi game.
+                        </p>
+
+                        <p>
+                            Tôi được tham gia 1 server discord tạo
+                            bởi bạn ấy và những người bạn,tối đó
+                            khá vui khi mọi người chơi game và trò
+                            chuyện vui vẻ cùng nhau.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =============================================
+            NGÀY 11/9 KẾT
+            ============================================= -->
+
+            <article class="diary-page left hidden">
+
+                <div class="diary-page-content">
+
+                    <div class="diary-date">
+                        11/9/2026
+                    </div>
+
+                    <div class="diary-text">
+
+                        <p>
+                            Nhưng tôi đã xin nghỉ sớm vì cơn đau đầu
+                            do biến đổi thời tiết,có lẽ tôi nên mặc
+                            nhiều áo hơn khi ra đường.
+                        </p>
+
+                        <p>
+                            Lúc tôi đang viết dòng này là 1h34 của
+                            ngày 11/9/2026.
+                        </p>
+
+                        <p>
+                            Ờm,có lẽ việc move on vẫn khó hơn tôi
+                            nghĩ (((=
+                        </p>
+
+                        <p>
+                            Tôi nhớ cô ấy quá......
+                        </p>
+
+                    </div>
+
+                    <div class="diary-note">
+                        Hết những dòng nhật ký hiện tại.
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <div class="book-spine"></div>
+
+        </div>
+
+
+        <!-- =================================================
+        ĐIỀU HƯỚNG
+        ================================================= -->
+
+        <div class="diary-navigation">
+
+            <button id="diaryPrev">
+                ←
+            </button>
+
+            <div
+                class="diary-page-number"
+                id="diaryPageNumber">
+                1 / 9
+            </div>
+
+            <button id="diaryNext">
+                →
+            </button>
+
+        </div>
+
+    </div>
+
 </div>
-<span class="diary-page-number">23</span>
-</div>
-<div class="diary-page diary-page-content" data-page="23">
-<div class="diary-content">
-<span class="diary-date">12/9/2026</span>
-<div class="diary-text"><p>hôm nay là ngày thứ 4 kể từ hôm ấy,hôm nay mọi
-                        việc khá bình thường</p></div>
-</div>
-<span class="diary-page-number">24</span>
-</div>
-<div class="diary-page diary-page-content" data-page="24">
-<div class="diary-content">
-<span class="diary-date">12/9/2026</span>
-<div class="diary-text"><p>Tôi thức dậy nào 10:00 sáng như mọi khi,như hầu
-                        hết giới trẻ hiện nay,việc đầu tiên tôi làm là
-                        mở chiếc điện thoại di động lên và kiểm tra
-                        thông báo và lướt mạng xã hội đến khi tỉnh ngủ
-                        hẳn,vẫn thao tác tay quen thuộc ấy,tôi nhanh
-                        chóng bấm vào ứng dụng tiktok,mạng xã hội thịnh
-                        hành bậc nhất thế giới hiện nay,và bấm vào check
-                        phần tin nhắn đã ghim,thứ thường chỉ dành cho
-                  </p></div>
-</div>
-<span class="diary-page-number">25</span>
-</div>
-<div class="diary-page diary-page-content" data-page="25">
-<div class="diary-content">
-<span class="diary-date">12/9/2026</span>
-<div class="diary-text"><p>      người đặc biệt quan trọng với tôi (tất nhiên là
-                        những người anh em chí cốt sẽ không có slot nào),
-                        vẫn cái tên cô mèo ngốc nghếch ấy bỗng hiện lên
-                        một thông báo share 1 bài post vô tri cho tôi
-                        lúc 5:51,có lẽ đó là thủ tục giữ streak hàng
-                        ngày của cô ấy và hôm nay cô ấy làm nó sớm hơn
-                        1 chút để cả ngày sẽ không còn cần bận tâm vè
-                        tôi thêm nữa,nhưng dù sao thì điều đó cũng tiếp
-        </p></div>
-</div>
-<span class="diary-page-number">26</span>
-</div>
-<div class="diary-page diary-page-content" data-page="26">
-<div class="diary-content">
-<span class="diary-date">12/9/2026</span>
-<div class="diary-text"><p>                cho tôi năng lượng để bật dậy đi đánh răng rửa
-                        mặt và ăn phần cơm mà bà chuẩn bị sẵn cho tôi,
-                        tôi khá yêu bà,bà đích thị là người khẩu xà tâm
-                        phật,bà chưa bao giờ nói với con cháu rằng bà
-                        yêu quý các cháu thậm chí còn hay mắng nhưng bà
-                        luôn ân cần và quan tâm các cháu,có lẽ tôi cũng
-                        bị gene di chuyền 1 chút từ bà</p></div>
-</div>
-<span class="diary-page-number">27</span>
-</div>
-<div class="diary-page diary-page-content" data-page="27">
-<div class="diary-content">
-<span class="diary-date">12/9/2026</span>
-<div class="diary-text"><p>tôi bắt đầu công việc bán hàng online của mình
-                        như mọi khi và giải trí trong lúc đăng bài tìm
-                        khách hàng</p><p>tôi vừa mở trò chơi free fire lên,một tựa game
-                        cũng khá thịnh hành với giới trẻ lúc bấy giờ
-                        thuộc thể loại battle royale</p></div>
-</div>
-<span class="diary-page-number">28</span>
-</div>
-<div class="diary-page diary-page-content" data-page="28">
-<div class="diary-content">
-<span class="diary-date">12/9/2026</span>
-<div class="diary-text"><p>tôi vẫn còn kết bạn với cô ấy và thậm trí là set
-                        tri kỉ(thứ mỗi tài khoản chỉ được liên kết với
-                        1 người duy nhất và thường dành cho người thân
-                        thiết,bạn chí cốt hay thậm chí là người yêu),tôi
-                        vào trang cá nhân của tôi để xem xem có những ai
-                        đã xem trang cá nhân tôi,bất ngờ khi cô ấy mặt
-                        trong danh sách đó (Cô ấy là người duy nhất xem
-                        T-T) ,đột nhiên tôi có cảm giác cô ấy cũng có
-          </p></div>
-</div>
-<span class="diary-page-number">29</span>
-</div>
-<div class="diary-page diary-page-content" data-page="29">
-<div class="diary-content">
-<span class="diary-date">12/9/2026</span>
-<div class="diary-text"><p>              quan tâm 1 chút đến mình,điều này khiến tôi vui
-                        suốt buổi chơi đó</p><p>hồi chiều tôi khá mỏi và buồn ngủ do hôm qua đi
-                        tập với cường độ cao hơn bình thường nên tôi đã
-                        nghỉ để ở nhà nghỉ ngơi</p></div>
-</div>
-<span class="diary-page-number">30</span>
-</div>
-<div class="diary-page diary-page-content" data-page="30">
-<div class="diary-content">
-<span class="diary-date">12/9/2026</span>
-<div class="diary-text"><p>Mọi thứ diễn ra khá bình thường cho đến khi bạn
-                        Vy rủ tôi vào game dể chơi chung với nhưng người
-                        bạn tôi mới quen hôm qua,cuối buổi mọi người có
-                        nghỉ gần hét thì tôi với bạn Vy có tâm sự với
-                        nhau vài điều linh tinh như là chuyện tình bạn
-                        ấy cũng như của tôi và ####</p></div>
-</div>
-<span class="diary-page-number">31</span>
-</div>
-<div class="diary-page diary-page-content" data-page="31">
-<div class="diary-content">
-<span class="diary-date">12/9/2026</span>
-<div class="diary-text"><p>Và ờm bạn ấy bảo tôi là người khá &quot;ok&quot; nhưng
-                        cũng khá red flag.tôi không biết nữa,nó hơi sai
-                        so với tôi nhận xét chính mình,tôi chỉ là 1 kẻ
-                        biến thái,simp,và cuồng 1 người thái quá theo
-                        như tôi nghĩ</p><p>Không có gì đặc sắc khi cuối ngày là lúc tôi ngắm
-                        #### như một thói quen,vẫn cái cảm giác nâng
-                        nâng như say rượu kèm theo chút đắng cay tiếc
-                        nuối ấy</p><p>Tôi tệ quá.</p></div>
-</div>
-<span class="diary-page-number">32</span>
-</div>
-<div class="diary-page diary-page-content" data-page="32">
-<div class="diary-content">
-<span class="diary-date">13/9/2026</span>
-<h1 class="diary-heading">13/9/2026</h1><div class="diary-text"><p>???????? Sự kiện may mắn quái quỷ gì thế này! tôi thức dậy vào lúc 11:30,muộn hơn mọi hôm,tôi lặp lại những việc cũ và không có gì đặc biệt,tôi lại đăng bài bán hàng,ăn cơm và ngồi chơi.Bất ngờ thay hôm nay là ngày đầu tiên sau 1 tuần ế ẩm,CUỐI CÙNG TÔI CŨNG BÁN ĐƯỢC HÀNG!!!!</p></div>
-</div>
-<span class="diary-page-number">33</span>
-</div>
-<div class="diary-page diary-page-content" data-page="33">
-<div class="diary-content">
-<span class="diary-date">13/9/2026</span>
-<div class="diary-text"><p>tôi liền sắm cho mình những thứ mà trước đây tôi không quan tâm đến lắm,2 chiếc quần xuông 1 cái màu đen và 1 cái màu xanh lục,1 chiếc áo thun màu trắng,1 đôi dép crocs 6cm hihi và 5 đôi tất trắng</p></div>
-</div>
-<span class="diary-page-number">34</span>
-</div>
-<div class="diary-page diary-page-content" data-page="34">
-<div class="diary-content">
-<span class="diary-date">13/9/2026</span>
-<div class="diary-text"><p>chuyện cứ như vậy diễn ra đến chiều tối,tôi đột nhiên nổi hứng vào trang cá nhân của cô ấy stalk,tôi vừa mở trang cá nhân cô ấy lên chưa ấm 10 giây thì bỗng cô ấy nhắn cho tôi với 1 lời mời rằng tối nay cô ấy muốn chơi game cùng tôi,tôi thấy khó hiểu và khá bối rối nên đã để đó khoảng 15 phút để ổn định tinh thần rồi mới dám trả lời cô ấy.</p></div>
-</div>
-<span class="diary-page-number">35</span>
-</div>
-<div class="diary-page diary-page-content" data-page="35">
-<div class="diary-content">
-<span class="diary-date">13/9/2026</span>
-<div class="diary-text"><p>Tôi tất nhiên là đồng ý vì trước đó tôi có nói với cô ấy rằng tôi khả năng cao sẽ không chủ động tìm đến cô ấy nữa nhưng nếu cô ấy chủ động thì tôi vẫn sẽ vui lòng.tôi nhanh chóng ti tắm ăn cơm và làm mọi thứ có thể để cuộc chơi của chung tôi không bị gián đoạn</p></div>
-</div>
-<span class="diary-page-number">36</span>
-</div>
-<div class="diary-page diary-page-content" data-page="36">
-<div class="diary-content">
-<span class="diary-date">13/9/2026</span>
-<div class="diary-text"><p>đúng 8:30 cô ấy nhắc tôi vào chơi cùng cô ấy,bọn tôi chơi khá vui (tôi nghĩ vậy) nhưng chỉ được khoảng 50 phút thì cô ấy bảo rằng cô ấy có bài tập đột xuất nên xin nghỉ sớm để làm ngày mai đi học</p></div>
-</div>
-<span class="diary-page-number">37</span>
-</div>
-<div class="diary-page diary-page-content" data-page="37">
-<div class="diary-content">
-<span class="diary-date">13/9/2026</span>
-<div class="diary-text"><p>đến khoảng 11:40,vì một chút tò mò nên tôi có hỏi lại cô ấy rằng tại sao hôm nay lại nổi hứng rủ tôi chơi game chung,bởi trong thâm tâm tôi đã nghĩ thật ra mình cũng không đáng để được cô ấy để ý đến mức đó nhất là sau khi tôi chủ động giữ khoảng cách sau lời từ chối</p></div>
-</div>
-<span class="diary-page-number">38</span>
-</div>
-<div class="diary-page diary-page-content" data-page="38">
-<div class="diary-content">
-<span class="diary-date">13/9/2026</span>
-<div class="diary-text"><p>Cô ấy có nói rằng cô ấy thấy khá bình thường và thoải mái,chắc tôi nghĩ nhiều quá rồi.sau đó tôi và cô ấy có chúc nhau ngủ ngon và kết thúc 1 ngày khá vui đối với tôi</p></div>
-</div>
-<span class="diary-page-number">39</span>
-</div>
-<div class="diary-page diary-page-content" data-page="39">
-<div class="diary-content">
-<span class="diary-date">13/9/2026</span>
-<div class="diary-text"><p>Độ khó của hành trình move on này vừa tăng thêm khoảng 67 bậc.....</p></div>
-</div>
-<span class="diary-page-number">40</span>
-</div>
-</div>
-<div class="diary-hint" id="diaryHint">↔ Vuốt sang trái để lật trang</div>
-<button id="diaryClose" aria-label="Đóng nhật ký">×</button>
-</div>
-</div>
+
+
 <script>
 
 /* =========================================================
@@ -3858,27 +3297,21 @@ CHUYỂN TRANG
 
 function showPage(pageId) {
 
-    document
-        .querySelectorAll(".screen")
-        .forEach(screen => {
-
-            screen.classList.remove("active");
-
-        });
+    document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+    });
 
     const page =
         document.getElementById(pageId);
 
     if (page) {
-
         page.classList.add("active");
-
     }
 }
 
 
 /* =========================================================
-RESET MÀU NỀN
+RESET MÀU
 ========================================================= */
 
 function normalMode() {
@@ -3976,7 +3409,6 @@ const dots =
 
 let currentSlide = 0;
 
-
 function showMemorySlide(index) {
 
     if (index < 0) {
@@ -3987,50 +3419,48 @@ function showMemorySlide(index) {
         index = slides.length - 1;
     }
 
-    slides.forEach(
-        (slide, i) => {
+    slides.forEach((slide, i) => {
 
-            slide.classList.toggle(
-                "active",
-                i === index
-            );
+        slide.classList.toggle(
+            "active",
+            i === index
+        );
 
-        }
-    );
+    });
 
-    dots.forEach(
-        (dot, i) => {
+    dots.forEach((dot, i) => {
 
-            dot.classList.toggle(
-                "active",
-                i === index
-            );
+        dot.classList.toggle(
+            "active",
+            i === index
+        );
 
-        }
-    );
+    });
 
     currentSlide = index;
 }
 
 
+/* =========================================================
+MEMORY NEXT
+========================================================= */
+
 document
     .querySelectorAll("[data-next]")
-    .forEach(
-        button => {
+    .forEach(button => {
 
-            button.addEventListener(
-                "click",
-                function() {
+        button.addEventListener(
+            "click",
+            function() {
 
-                    showMemorySlide(
-                        currentSlide + 1
-                    );
+                showMemorySlide(
+                    currentSlide + 1
+                );
 
-                }
-            );
+            }
+        );
 
-        }
-    );
+    });
 
 
 /* =========================================================
@@ -4065,6 +3495,253 @@ document
 
         }
     );
+
+
+/* =========================================================
+MỞ NHẬT KÝ
+========================================================= */
+
+const diaryOverlay =
+    document.getElementById("diaryOverlay");
+
+const diaryBook =
+    document.getElementById("diaryBook");
+
+const openDiary =
+    document.getElementById("openDiary");
+
+const closeDiary =
+    document.getElementById("closeDiary");
+
+
+openDiary.addEventListener(
+    "click",
+    function() {
+
+        diaryOverlay.classList.add("active");
+
+        diaryBook.classList.remove("opened");
+
+    }
+);
+
+
+closeDiary.addEventListener(
+    "click",
+    function() {
+
+        diaryOverlay.classList.remove("active");
+
+        diaryBook.classList.remove("opened");
+
+    }
+);
+
+
+/* =========================================================
+CLICK BÌA ĐỂ MỞ SÁCH
+========================================================= */
+
+document
+    .getElementById("diaryCover")
+    .addEventListener(
+        "click",
+        function() {
+
+            diaryBook.classList.add("opened");
+
+        }
+    );
+
+
+/* =========================================================
+ĐIỀU KHIỂN NHẬT KÝ
+========================================================= */
+
+const diaryPages =
+    Array.from(
+        document.querySelectorAll(".diary-page")
+    );
+
+let diaryCurrent = 0;
+
+const diaryPageNumber =
+    document.getElementById(
+        "diaryPageNumber"
+    );
+
+
+function updateDiaryPages() {
+
+    diaryPages.forEach(
+        (page, index) => {
+
+            page.classList.toggle(
+                "hidden",
+                index !== diaryCurrent &&
+                index !== diaryCurrent + 1
+            );
+
+        }
+    );
+
+    const total =
+        Math.ceil(
+            diaryPages.length / 2
+        );
+
+    const current =
+        Math.floor(
+            diaryCurrent / 2
+        ) + 1;
+
+    diaryPageNumber.textContent =
+        current + " / " + total;
+}
+
+
+/* =========================================================
+TRANG TIẾP
+========================================================= */
+
+function diaryNextPage() {
+
+    if (
+        diaryCurrent + 2 <
+        diaryPages.length
+    ) {
+
+        diaryCurrent += 2;
+
+        updateDiaryPages();
+
+    }
+}
+
+
+/* =========================================================
+TRANG TRƯỚC
+========================================================= */
+
+function diaryPrevPage() {
+
+    if (diaryCurrent - 2 >= 0) {
+
+        diaryCurrent -= 2;
+
+        updateDiaryPages();
+
+    }
+}
+
+
+document
+    .getElementById("diaryNext")
+    .addEventListener(
+        "click",
+        diaryNextPage
+    );
+
+
+document
+    .getElementById("diaryPrev")
+    .addEventListener(
+        "click",
+        diaryPrevPage
+    );
+
+
+/* =========================================================
+SWIPE TRÊN ĐIỆN THOẠI
+========================================================= */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+diaryBook.addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+    },
+    { passive: true }
+);
+
+
+diaryBook.addEventListener(
+    "touchend",
+    function(event) {
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+        const difference =
+            touchEndX - touchStartX;
+
+        if (Math.abs(difference) < 50) {
+            return;
+        }
+
+        if (difference < 0) {
+
+            diaryNextPage();
+
+        } else {
+
+            diaryPrevPage();
+
+        }
+
+    },
+    { passive: true }
+);
+
+
+/* =========================================================
+PHÍM MŨI TÊN
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            !diaryOverlay.classList.contains(
+                "active"
+            )
+        ) {
+            return;
+        }
+
+        if (event.key === "ArrowRight") {
+
+            diaryNextPage();
+
+        }
+
+        if (event.key === "ArrowLeft") {
+
+            diaryPrevPage();
+
+        }
+
+        if (event.key === "Escape") {
+
+            closeDiary.click();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+KHỞI TẠO NHẬT KÝ
+========================================================= */
+
+updateDiaryPages();
 
 
 /* =========================================================
@@ -4144,14 +3821,15 @@ CANVAS CONTOUR
 ========================================================= */
 
 const canvas =
-    document.getElementById("contourCanvas");
+    document.getElementById(
+        "contourCanvas"
+    );
 
 const ctx =
     canvas.getContext("2d");
 
 let width;
 let height;
-
 
 function resizeCanvas() {
 
@@ -4181,18 +3859,14 @@ function resizeCanvas() {
     );
 }
 
-
 resizeCanvas();
-
 
 window.addEventListener(
     "resize",
     resizeCanvas
 );
 
-
 let contourTime = 0;
-
 
 function drawContours() {
 
@@ -4211,7 +3885,6 @@ function drawContours() {
 
     ctx.lineWidth = 1;
 
-
     for (
         let i = 0;
         i < 18;
@@ -4220,7 +3893,6 @@ function drawContours() {
 
         ctx.beginPath();
 
-
         for (
             let x = -50;
             x <= w + 50;
@@ -4228,27 +3900,21 @@ function drawContours() {
         ) {
 
             const y =
-
                 h * (
                     0.12 +
                     i * 0.055
                 )
-
                 +
-
                 Math.sin(
                     x * 0.008 +
                     contourTime * 0.0007 +
                     i
                 ) * 28
-
                 +
-
                 Math.sin(
                     x * 0.003 -
                     contourTime * 0.0004
                 ) * 18;
-
 
             if (x === -50) {
 
@@ -4265,38 +3931,24 @@ function drawContours() {
                 );
 
             }
-
         }
 
-
         ctx.strokeStyle =
-
-            document.body
-                .classList
-                .contains("pink-mode")
-
-            ?
-
-            "rgba(255,110,145,.18)"
-
-            :
-
-            "rgba(80,200,235,.13)";
-
+            document.body.classList.contains(
+                "pink-mode"
+            )
+            ? "rgba(255,110,145,.18)"
+            : "rgba(80,200,235,.13)";
 
         ctx.stroke();
-
     }
 
-
     contourTime += 16;
-
 
     requestAnimationFrame(
         drawContours
     );
 }
-
 
 drawContours();
 
@@ -4309,7 +3961,6 @@ const rainContainer =
     document.getElementById(
         "rainContainer"
     );
-
 
 for (
     let i = 0;
@@ -4326,218 +3977,29 @@ for (
         "rain-drop";
 
     drop.style.left =
-        Math.random() *
-        110 +
-        "%";
+        Math.random() * 110 + "%";
 
     drop.style.height =
         40 +
-        Math.random() *
-        75 +
+        Math.random() * 75 +
         "px";
 
     drop.style.opacity =
-        .2 +
-        Math.random() *
-        .55;
+        0.2 +
+        Math.random() * 0.55;
 
     drop.style.animationDuration =
-        .45 +
-        Math.random() *
-        .5 +
+        0.45 +
+        Math.random() * 0.5 +
         "s";
 
     drop.style.animationDelay =
-        Math.random() *
-        2 +
+        Math.random() * 2 +
         "s";
 
     rainContainer.appendChild(
         drop
     );
-}
-
-
-
-/* =========================================================
-   NHẬT KÝ — LẬT TRANG ỔN ĐỊNH
-   ========================================================= */
-const diaryOverlay = document.getElementById("diaryOverlay");
-const diaryCover = document.getElementById("diaryCover");
-const diaryOpen = document.getElementById("openDiary");
-const diaryClose = document.getElementById("diaryClose");
-const diaryBook = document.getElementById("diaryBook");
-const diaryPages = [...document.querySelectorAll(".diary-page-content")];
-const diaryHint = document.getElementById("diaryHint");
-let diaryPageIndex = 0;
-let diaryAnimating = false;
-let diaryOpened = false;
-let touchStartX = 0, touchStartY = 0;
-
-function renderDiaryPages(){
-    diaryPages.forEach((page, i) => {
-        page.classList.remove("current", "flip-next", "flip-prev", "page-under");
-        page.style.zIndex = (i === diaryPageIndex) ? 60 : 10;
-        page.style.display = (i === diaryPageIndex) ? "block" : "none";
-    });
-    if (diaryPages[diaryPageIndex]) {
-        diaryPages[diaryPageIndex].classList.add("current");
-        diaryPages[diaryPageIndex].style.display = "block";
-        diaryPages[diaryPageIndex].style.zIndex = 60;
-    }
-}
-
-function updateDiaryHint(){
-    if (!diaryHint) return;
-    diaryHint.textContent = diaryPageIndex === diaryPages.length - 1
-        ? "↔ Vuốt sang phải để xem lại trang trước"
-        : "↔ Vuốt sang trái để lật trang";
-}
-
-function turnDiary(direction){
-    if (!diaryOpened || diaryAnimating) return;
-    const targetIndex = diaryPageIndex + direction;
-    if (targetIndex < 0 || targetIndex >= diaryPages.length) return;
-
-    const current = diaryPages[diaryPageIndex];
-    const target = diaryPages[targetIndex];
-    diaryAnimating = true;
-
-    // Đặt trang đích phía dưới trang hiện tại để không bị nhảy/mất sách.
-    diaryPages.forEach((p, i) => {
-        p.classList.remove("current", "flip-next", "flip-prev", "page-under");
-        p.style.display = "none";
-        p.style.zIndex = 10;
-    });
-    target.style.display = "block";
-    target.style.zIndex = 20;
-    target.classList.add("page-under");
-    current.style.display = "block";
-    current.style.zIndex = 60;
-    current.classList.add(direction > 0 ? "flip-next" : "flip-prev");
-
-    const finish = () => {
-        current.removeEventListener("animationend", finish);
-        diaryPageIndex = targetIndex;
-        diaryAnimating = false;
-        renderDiaryPages();
-        updateDiaryHint();
-    };
-    current.addEventListener("animationend", finish, { once: true });
-
-    // Fallback nếu trình duyệt không phát animationend.
-    setTimeout(() => {
-        if (diaryAnimating) finish();
-    }, 900);
-}
-
-function nextDiaryPage(){ turnDiary(1); }
-function previousDiaryPage(){ turnDiary(-1); }
-
-if (diaryOpen) {
-    diaryOpen.addEventListener("click", () => {
-        diaryOverlay.classList.add("active");
-        diaryPageIndex = 0;
-        diaryOpened = false;
-        diaryAnimating = false;
-        diaryCover.classList.remove("open");
-        renderDiaryPages();
-        setTimeout(() => {
-            if (diaryHint) diaryHint.textContent = "↔ Vuốt sang trái để lật trang";
-        }, 350);
-    });
-}
-
-if (diaryCover) {
-    diaryCover.addEventListener("click", () => {
-        diaryCover.classList.add("open");
-        diaryOpened = true;
-        renderDiaryPages();
-        updateDiaryHint();
-    });
-}
-
-if (diaryClose) {
-    diaryClose.addEventListener("click", () => {
-        diaryOverlay.classList.remove("active");
-        diaryCover.classList.remove("open");
-        diaryOpened = false;
-        diaryAnimating = false;
-    });
-}
-
-if (diaryOverlay) {
-    diaryOverlay.addEventListener("touchstart", e => {
-        if (!diaryOpened || diaryAnimating) return;
-        const t = e.changedTouches[0];
-        touchStartX = t.clientX;
-        touchStartY = t.clientY;
-    }, { passive: true });
-
-    diaryOverlay.addEventListener("touchend", e => {
-        if (!diaryOpened || diaryAnimating) return;
-        const t = e.changedTouches[0];
-        const dx = t.clientX - touchStartX;
-        const dy = t.clientY - touchStartY;
-        if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.2) {
-            dx < 0 ? nextDiaryPage() : previousDiaryPage();
-        }
-    }, { passive: true });
-
-    diaryOverlay.addEventListener("click", e => {
-        if (e.target === diaryOverlay) diaryClose?.click();
-    });
-}
-
-if (diaryBook) {
-    diaryBook.addEventListener("pointerdown", e => {
-        if (!diaryOpened || diaryAnimating || e.pointerType === "touch") return;
-        touchStartX = e.clientX;
-        diaryBook.setPointerCapture?.(e.pointerId);
-    });
-    diaryBook.addEventListener("pointerup", e => {
-        if (!diaryOpened || diaryAnimating || e.pointerType === "touch") return;
-        const dx = e.clientX - touchStartX;
-        if (Math.abs(dx) > 70) dx < 0 ? nextDiaryPage() : previousDiaryPage();
-    });
-}
-
-document.addEventListener("keydown", e => {
-    if (!diaryOverlay?.classList.contains("active")) return;
-    if (e.key === "ArrowLeft") previousDiaryPage();
-    if (e.key === "ArrowRight" || e.key === " ") nextDiaryPage();
-    if (e.key === "Escape") diaryClose?.click();
-});
-
-// Sao nền đêm: tạo bằng JS để nhẹ và không cần ảnh ngoài.
-const diaryStars = document.getElementById("diaryStars");
-if (diaryStars && !diaryStars.children.length) {
-    for (let i = 0; i < 110; i++) {
-        const star = document.createElement("span");
-        star.className = "diary-star";
-        star.style.left = (Math.random() * 100) + "%";
-        star.style.top = (Math.random() * 78) + "%";
-        const size = (1 + Math.random() * 2.6);
-        star.style.width = size + "px";
-        star.style.height = size + "px";
-        star.style.animationDelay = (-Math.random() * 4) + "s";
-        star.style.animationDuration = (2.2 + Math.random() * 3.5) + "s";
-        diaryStars.appendChild(star);
-    }
-}
-
-/* tuyết */
-const snowContainer=document.getElementById("snowContainer");
-for(let i=0;i<75;i++){
-  const f=document.createElement("span");
-  f.className="snowflake";
-  f.textContent=Math.random()>.45?"❄":"✦";
-  f.style.left=Math.random()*100+"%";
-  f.style.fontSize=(8+Math.random()*13)+"px";
-  f.style.animationDuration=(5+Math.random()*7)+"s";
-  f.style.animationDelay=(-Math.random()*8)+"s";
-  f.style.setProperty("--drift",(Math.random()*120-60)+"px");
-  snowContainer.appendChild(f);
 }
 
 </script>
