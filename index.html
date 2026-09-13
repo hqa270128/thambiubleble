@@ -2333,6 +2333,198 @@ body.celebrate-mode #celebrationScene{opacity:1;visibility:visible}
     .diary-date{font-size:17px!important}
 }
 
+
+/* =========================================================
+   DIARY FIX — NIGHT SKY + MOSS GREEN OLD COVER + STABLE PAGES
+   ========================================================= */
+#diaryOverlay{
+    isolation:isolate;
+    overflow:hidden;
+    background:#050914 !important;
+}
+
+#diaryOverlay .diary-night-sky{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 50% 20%,rgba(56,78,128,.28),transparent 36%),
+        radial-gradient(circle at 20% 80%,rgba(18,37,75,.32),transparent 40%),
+        linear-gradient(180deg,#030711 0%,#071226 52%,#02050d 100%);
+}
+#diaryOverlay .diary-moon{
+    position:absolute;
+    width:clamp(90px,10vw,145px);
+    height:clamp(90px,10vw,145px);
+    right:clamp(7%,10vw,16%);
+    top:clamp(7%,9vh,13%);
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 32%,#fffdf1 0 34%,#f6edc7 58%,#d9d1ac 100%);
+    box-shadow:0 0 25px rgba(255,247,207,.7),0 0 75px rgba(185,205,255,.28);
+}
+#diaryOverlay .diary-moon::after{
+    content:"";
+    position:absolute;
+    width:18%;height:18%;left:22%;top:25%;border-radius:50%;
+    background:rgba(150,145,122,.15);
+    box-shadow:35px 25px 0 rgba(150,145,122,.12),58px 8px 0 rgba(150,145,122,.10),22px 58px 0 rgba(150,145,122,.10);
+}
+#diaryOverlay .diary-stars{position:absolute;inset:0;}
+#diaryOverlay .diary-star{
+    position:absolute;
+    display:block;
+    border-radius:50%;
+    background:#fffdf0;
+    box-shadow:0 0 6px rgba(255,255,255,.85);
+    animation:diaryStarTwinkle ease-in-out infinite alternate;
+}
+@keyframes diaryStarTwinkle{from{opacity:.28;transform:scale(.7)}to{opacity:1;transform:scale(1.35)}}
+
+#diaryOverlay .diary-book{
+    z-index:5 !important;
+    width:min(980px,94vw) !important;
+    height:min(720px,84dvh) !important;
+    perspective:2400px !important;
+    filter:drop-shadow(0 30px 35px rgba(0,0,0,.78)) !important;
+}
+
+/* Bìa xanh rêu cũ kỹ */
+#diaryOverlay .diary-cover{
+    z-index:200 !important;
+    background:
+        radial-gradient(circle at 25% 20%,rgba(177,190,136,.16),transparent 24%),
+        radial-gradient(circle at 75% 78%,rgba(20,34,21,.32),transparent 30%),
+        repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 5px),
+        linear-gradient(135deg,#34442f 0%,#59664a 30%,#414f38 55%,#303d2c 78%,#202b20 100%) !important;
+    border:9px solid #1d281c !important;
+    box-shadow:
+        inset 0 0 0 2px rgba(151,160,112,.28),
+        inset 0 0 45px rgba(0,0,0,.68),
+        15px 0 30px rgba(0,0,0,.55) !important;
+}
+#diaryOverlay .diary-cover::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.28;
+    background:
+        radial-gradient(circle at 12% 20%,#182218 0 1px,transparent 2px),
+        radial-gradient(circle at 72% 65%,#10180f 0 1px,transparent 2px);
+    background-size:47px 53px,61px 67px;
+    mix-blend-mode:multiply;
+}
+#diaryOverlay .cover-decoration{
+    border-color:rgba(176,185,132,.42) !important;
+}
+#diaryOverlay .cover-decoration::before{border-color:rgba(191,198,151,.24) !important}
+#diaryOverlay .cover-symbol{color:#b8c095 !important;text-shadow:0 0 18px rgba(185,196,145,.18) !important}
+#diaryOverlay .cover-title{color:#d2d7b1 !important;text-shadow:2px 2px 0 #1b2419,0 0 20px rgba(180,195,140,.14) !important}
+#diaryOverlay .cover-open-hint{color:rgba(211,216,181,.72) !important}
+
+#diaryOverlay .diary-inside{
+    z-index:10 !important;
+    background:#263023 !important;
+    border-radius:10px 16px 16px 10px !important;
+}
+
+/* Tờ giấy phẳng, chỉ bo hai góc ở mép ngoài */
+#diaryOverlay .diary-page{
+    display:none !important;
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    padding:clamp(38px,5vw,64px) clamp(42px,6vw,78px) clamp(42px,5vw,58px) !important;
+    overflow:hidden !important;
+    border:0 !important;
+    clip-path:none !important;
+    color:#342d21 !important;
+    background:
+        repeating-linear-gradient(to bottom,transparent 0,transparent 30px,rgba(93,96,89,.18) 31px,transparent 32px),
+        radial-gradient(circle at 8% 8%,rgba(117,91,51,.10),transparent 25%),
+        radial-gradient(circle at 92% 90%,rgba(117,91,51,.10),transparent 27%),
+        linear-gradient(105deg,#cdbd91,#e1d4ad 18%,#e7dbb8 52%,#ded0a6 84%,#c8b787) !important;
+    box-shadow:inset 0 0 45px rgba(70,50,25,.18),5px 0 12px rgba(0,0,0,.22) !important;
+    transform-origin:center center !important;
+    backface-visibility:hidden !important;
+    transform-style:preserve-3d !important;
+    will-change:transform,opacity,filter !important;
+}
+#diaryOverlay .diary-page.current{
+    display:block !important;
+    opacity:1 !important;
+    transform:rotateY(0deg) !important;
+    animation:none !important;
+    z-index:60 !important;
+}
+#diaryOverlay .diary-page.page-under{
+    display:block !important;
+    opacity:1 !important;
+    transform:rotateY(0deg) !important;
+    animation:none !important;
+    z-index:20 !important;
+}
+#diaryOverlay .diary-page.flip-next{
+    display:block !important;
+    z-index:60 !important;
+    transform-origin:left center !important;
+    animation:diaryRealFlipNext .82s cubic-bezier(.62,.08,.24,1) forwards !important;
+}
+#diaryOverlay .diary-page.flip-prev{
+    display:block !important;
+    z-index:60 !important;
+    transform-origin:right center !important;
+    animation:diaryRealFlipPrev .82s cubic-bezier(.62,.08,.24,1) forwards !important;
+}
+@keyframes diaryRealFlipNext{
+    0%{transform:rotateY(0deg);filter:brightness(1);box-shadow:inset 0 0 45px rgba(70,50,25,.18),5px 0 12px rgba(0,0,0,.22)}
+    45%{filter:brightness(.72);box-shadow:inset -18px 0 35px rgba(0,0,0,.20),-12px 0 25px rgba(0,0,0,.25)}
+    100%{transform:rotateY(-180deg);filter:brightness(.52);box-shadow:inset -30px 0 55px rgba(0,0,0,.30),-20px 0 35px rgba(0,0,0,.34)}
+}
+@keyframes diaryRealFlipPrev{
+    0%{transform:rotateY(0deg);filter:brightness(1);box-shadow:inset 0 0 45px rgba(70,50,25,.18),5px 0 12px rgba(0,0,0,.22)}
+    45%{filter:brightness(.72);box-shadow:inset 18px 0 35px rgba(0,0,0,.20),12px 0 25px rgba(0,0,0,.25)}
+    100%{transform:rotateY(180deg);filter:brightness(.52);box-shadow:inset 30px 0 55px rgba(0,0,0,.30),20px 0 35px rgba(0,0,0,.34)}
+}
+
+#diaryOverlay .diary-page::before{
+    opacity:.55 !important;
+    background-image:
+        radial-gradient(circle at 12% 17%,rgba(66,35,12,.18) 0 1px,transparent 2px),
+        radial-gradient(circle at 73% 31%,rgba(80,42,14,.13) 0 1px,transparent 2px),
+        repeating-linear-gradient(0deg,rgba(76,45,18,.018) 0 1px,transparent 1px 4px) !important;
+    mix-blend-mode:multiply;
+}
+#diaryOverlay .diary-page::after{
+    box-shadow:inset 0 0 38px rgba(57,28,9,.22),inset 0 0 80px rgba(87,48,17,.10) !important;
+}
+#diaryOverlay .diary-content{
+    height:100% !important;
+    overflow:hidden !important;
+    padding-right:0 !important;
+}
+#diaryOverlay .diary-text{
+    position:relative;
+    z-index:5;
+    font-size:clamp(15px,1.45vw,18px) !important;
+    line-height:1.88 !important;
+}
+#diaryOverlay .diary-text p{margin-bottom:18px !important}
+
+@media(max-width:700px){
+    #diaryOverlay{padding:10px !important}
+    #diaryOverlay .diary-book{width:96vw !important;height:84dvh !important}
+    #diaryOverlay .diary-page{
+        padding:34px 28px 42px !important;
+        border-radius:0 13px 13px 0 !important;
+    }
+    #diaryOverlay .diary-moon{right:7%;top:6%;width:82px;height:82px}
+    #diaryOverlay .diary-text{font-size:15px !important;line-height:1.72 !important}
+}
+
 </style>
 
 </head>
@@ -3190,6 +3382,7 @@ NHẬT KÝ OVERLAY
 ========================================================= -->
 
 <div id="diaryOverlay">
+<div class="diary-night-sky" aria-hidden="true"><div class="diary-moon"></div><div class="diary-stars" id="diaryStars"></div></div>
 <div class="diary-book" id="diaryBook">
 <div class="diary-cover" id="diaryCover">
 <div class="cover-decoration"></div>
@@ -4167,93 +4360,171 @@ for (
 
 
 /* =========================================================
-   NHẬT KÝ — LẬT TRANG BẰNG VUỐT / CHUỘT / PHÍM
+   NHẬT KÝ — LẬT TRANG ỔN ĐỊNH
    ========================================================= */
-const diaryOverlay=document.getElementById("diaryOverlay");
-const diaryCover=document.getElementById("diaryCover");
-const diaryOpen=document.getElementById("openDiary");
-const diaryClose=document.getElementById("diaryClose");
-const diaryBook=document.getElementById("diaryBook");
-const diaryPages=[...document.querySelectorAll(".diary-page-content")];
-const diaryHint=document.getElementById("diaryHint");
-let diaryPageIndex=0, diaryAnimating=false, diaryOpened=false;
-let touchStartX=0,touchStartY=0;
+const diaryOverlay = document.getElementById("diaryOverlay");
+const diaryCover = document.getElementById("diaryCover");
+const diaryOpen = document.getElementById("openDiary");
+const diaryClose = document.getElementById("diaryClose");
+const diaryBook = document.getElementById("diaryBook");
+const diaryPages = [...document.querySelectorAll(".diary-page-content")];
+const diaryHint = document.getElementById("diaryHint");
+let diaryPageIndex = 0;
+let diaryAnimating = false;
+let diaryOpened = false;
+let touchStartX = 0, touchStartY = 0;
 
-function renderDiaryPages(direction="none"){
-  diaryPages.forEach((p,i)=>{
-    p.classList.remove("current","flip-next","flip-prev");
-    p.style.zIndex=i===diaryPageIndex?60:10;
-    if(i===diaryPageIndex) p.classList.add("current");
-  });
-}
-function turnDiary(direction){
-  if(!diaryOpened || diaryAnimating) return;
-  const target=diaryPageIndex+direction;
-  if(target<0 || target>=diaryPages.length) return;
-  diaryAnimating=true;
-  const current=diaryPages[diaryPageIndex];
-  const next=diaryPages[target];
-  next.style.display="block";
-  next.classList.add(direction>0?"flip-prev":"flip-next");
-  setTimeout(()=>{
-    diaryPageIndex=target;
-    renderDiaryPages();
-    diaryAnimating=false;
-    if(diaryHint){
-      diaryHint.textContent=diaryPageIndex===diaryPages.length-1
-        ?"↔ Vuốt sang phải để xem lại trang trước"
-        :"↔ Vuốt sang trái để lật trang";
+function renderDiaryPages(){
+    diaryPages.forEach((page, i) => {
+        page.classList.remove("current", "flip-next", "flip-prev", "page-under");
+        page.style.zIndex = (i === diaryPageIndex) ? 60 : 10;
+        page.style.display = (i === diaryPageIndex) ? "block" : "none";
+    });
+    if (diaryPages[diaryPageIndex]) {
+        diaryPages[diaryPageIndex].classList.add("current");
+        diaryPages[diaryPageIndex].style.display = "block";
+        diaryPages[diaryPageIndex].style.zIndex = 60;
     }
-  },620);
 }
-function nextDiaryPage(){turnDiary(1)}
-function previousDiaryPage(){turnDiary(-1)}
 
-diaryOpen.addEventListener("click",()=>{
-  diaryOverlay.classList.add("active");
-  diaryPageIndex=0;
-  diaryOpened=false;
-  diaryCover.classList.remove("open");
-  renderDiaryPages();
-  setTimeout(()=>{ if(diaryHint) diaryHint.textContent="↔ Vuốt sang trái để lật trang"; },500);
+function updateDiaryHint(){
+    if (!diaryHint) return;
+    diaryHint.textContent = diaryPageIndex === diaryPages.length - 1
+        ? "↔ Vuốt sang phải để xem lại trang trước"
+        : "↔ Vuốt sang trái để lật trang";
+}
+
+function turnDiary(direction){
+    if (!diaryOpened || diaryAnimating) return;
+    const targetIndex = diaryPageIndex + direction;
+    if (targetIndex < 0 || targetIndex >= diaryPages.length) return;
+
+    const current = diaryPages[diaryPageIndex];
+    const target = diaryPages[targetIndex];
+    diaryAnimating = true;
+
+    // Đặt trang đích phía dưới trang hiện tại để không bị nhảy/mất sách.
+    diaryPages.forEach((p, i) => {
+        p.classList.remove("current", "flip-next", "flip-prev", "page-under");
+        p.style.display = "none";
+        p.style.zIndex = 10;
+    });
+    target.style.display = "block";
+    target.style.zIndex = 20;
+    target.classList.add("page-under");
+    current.style.display = "block";
+    current.style.zIndex = 60;
+    current.classList.add(direction > 0 ? "flip-next" : "flip-prev");
+
+    const finish = () => {
+        current.removeEventListener("animationend", finish);
+        diaryPageIndex = targetIndex;
+        diaryAnimating = false;
+        renderDiaryPages();
+        updateDiaryHint();
+    };
+    current.addEventListener("animationend", finish, { once: true });
+
+    // Fallback nếu trình duyệt không phát animationend.
+    setTimeout(() => {
+        if (diaryAnimating) finish();
+    }, 900);
+}
+
+function nextDiaryPage(){ turnDiary(1); }
+function previousDiaryPage(){ turnDiary(-1); }
+
+if (diaryOpen) {
+    diaryOpen.addEventListener("click", () => {
+        diaryOverlay.classList.add("active");
+        diaryPageIndex = 0;
+        diaryOpened = false;
+        diaryAnimating = false;
+        diaryCover.classList.remove("open");
+        renderDiaryPages();
+        setTimeout(() => {
+            if (diaryHint) diaryHint.textContent = "↔ Vuốt sang trái để lật trang";
+        }, 350);
+    });
+}
+
+if (diaryCover) {
+    diaryCover.addEventListener("click", () => {
+        diaryCover.classList.add("open");
+        diaryOpened = true;
+        renderDiaryPages();
+        updateDiaryHint();
+    });
+}
+
+if (diaryClose) {
+    diaryClose.addEventListener("click", () => {
+        diaryOverlay.classList.remove("active");
+        diaryCover.classList.remove("open");
+        diaryOpened = false;
+        diaryAnimating = false;
+    });
+}
+
+if (diaryOverlay) {
+    diaryOverlay.addEventListener("touchstart", e => {
+        if (!diaryOpened || diaryAnimating) return;
+        const t = e.changedTouches[0];
+        touchStartX = t.clientX;
+        touchStartY = t.clientY;
+    }, { passive: true });
+
+    diaryOverlay.addEventListener("touchend", e => {
+        if (!diaryOpened || diaryAnimating) return;
+        const t = e.changedTouches[0];
+        const dx = t.clientX - touchStartX;
+        const dy = t.clientY - touchStartY;
+        if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+            dx < 0 ? nextDiaryPage() : previousDiaryPage();
+        }
+    }, { passive: true });
+
+    diaryOverlay.addEventListener("click", e => {
+        if (e.target === diaryOverlay) diaryClose?.click();
+    });
+}
+
+if (diaryBook) {
+    diaryBook.addEventListener("pointerdown", e => {
+        if (!diaryOpened || diaryAnimating || e.pointerType === "touch") return;
+        touchStartX = e.clientX;
+        diaryBook.setPointerCapture?.(e.pointerId);
+    });
+    diaryBook.addEventListener("pointerup", e => {
+        if (!diaryOpened || diaryAnimating || e.pointerType === "touch") return;
+        const dx = e.clientX - touchStartX;
+        if (Math.abs(dx) > 70) dx < 0 ? nextDiaryPage() : previousDiaryPage();
+    });
+}
+
+document.addEventListener("keydown", e => {
+    if (!diaryOverlay?.classList.contains("active")) return;
+    if (e.key === "ArrowLeft") previousDiaryPage();
+    if (e.key === "ArrowRight" || e.key === " ") nextDiaryPage();
+    if (e.key === "Escape") diaryClose?.click();
 });
-diaryCover.addEventListener("click",()=>{
-  diaryCover.classList.add("open");
-  diaryOpened=true;
-  renderDiaryPages();
-});
-diaryClose.addEventListener("click",()=>{
-  diaryOverlay.classList.remove("active");
-  diaryCover.classList.remove("open");
-  diaryOpened=false;
-});
-diaryOverlay.addEventListener("touchstart",e=>{
-  if(!diaryOpened)return;
-  const t=e.changedTouches[0]; touchStartX=t.clientX; touchStartY=t.clientY;
-},{passive:true});
-diaryOverlay.addEventListener("touchend",e=>{
-  if(!diaryOpened)return;
-  const t=e.changedTouches[0],dx=t.clientX-touchStartX,dy=t.clientY-touchStartY;
-  if(Math.abs(dx)>55 && Math.abs(dx)>Math.abs(dy)*1.2) dx<0?nextDiaryPage():previousDiaryPage();
-},{passive:true});
-diaryBook.addEventListener("pointerdown",e=>{
-  if(!diaryOpened || e.pointerType==="touch")return;
-  touchStartX=e.clientX; diaryBook.setPointerCapture?.(e.pointerId);
-});
-diaryBook.addEventListener("pointerup",e=>{
-  if(!diaryOpened || e.pointerType==="touch")return;
-  const dx=e.clientX-touchStartX;
-  if(Math.abs(dx)>70) dx<0?nextDiaryPage():previousDiaryPage();
-});
-document.addEventListener("keydown",e=>{
-  if(!diaryOverlay.classList.contains("active"))return;
-  if(e.key==="ArrowLeft")previousDiaryPage();
-  if(e.key==="ArrowRight" || e.key===" ")nextDiaryPage();
-  if(e.key==="Escape")diaryClose.click();
-});
-diaryOverlay.addEventListener("click",e=>{
-  if(e.target===diaryOverlay)diaryClose.click();
-});
+
+// Sao nền đêm: tạo bằng JS để nhẹ và không cần ảnh ngoài.
+const diaryStars = document.getElementById("diaryStars");
+if (diaryStars && !diaryStars.children.length) {
+    for (let i = 0; i < 110; i++) {
+        const star = document.createElement("span");
+        star.className = "diary-star";
+        star.style.left = (Math.random() * 100) + "%";
+        star.style.top = (Math.random() * 78) + "%";
+        const size = (1 + Math.random() * 2.6);
+        star.style.width = size + "px";
+        star.style.height = size + "px";
+        star.style.animationDelay = (-Math.random() * 4) + "s";
+        star.style.animationDuration = (2.2 + Math.random() * 3.5) + "s";
+        diaryStars.appendChild(star);
+    }
+}
 
 /* tuyết */
 const snowContainer=document.getElementById("snowContainer");
